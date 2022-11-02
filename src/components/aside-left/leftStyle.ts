@@ -5,7 +5,7 @@ export const AsideLeft = styled.aside`
     align-items: flex-end;
     justify-content: space-between;
     width: 25vw;
-    height: 92vh;
+    height: 90vh;
     flex-direction: column;
     font-family: 'Nunito', sans-serif;
     position: fixed;
