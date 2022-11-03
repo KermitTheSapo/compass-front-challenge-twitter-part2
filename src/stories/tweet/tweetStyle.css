@@ -1,0 +1,110 @@
+@import url("../../root.css");
+
+.post__tweet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 378px;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.tweet__figure{
+    height: 100%;
+    margin-right: 11px;
+}
+
+.tweet__figure__img{
+    border-radius: 50%;
+}
+
+.tweet__main{
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet__main__user{
+    display: flex;
+    align-items: center;
+    height: 22px;
+}
+
+.name__text{
+    font-weight: 700;   
+}
+.name__text-light{
+    
+    color: var(--Black); 
+}
+.name__text-dark{
+    color: var(--White); 
+}
+
+.name__nick, .name__time{
+    font-weight: 500;
+}
+
+.name__dot{
+    font-weight: 400;
+}
+
+.name__nick-light, .name__dot-light, .name__time-light{
+    color: var(--Dark6);
+}
+.name__nick-dark, .name__dot-dark, .name__time-dark{
+    color: var(--Dark5);
+}
+
+.name__text, .name__nick, .name__dot, .name__time{
+    font-size: 0.938rem;  
+    margin-right: 4px;
+}
+
+.tweet__main__content{
+    height: 18px;
+    font-weight: 500;
+    font-size: 0.938rem;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.tweet__main__content-light{
+    color: var(--Black);
+}
+.tweet__main__content-dark{
+    color: var(--White);
+}
+
+.tweet__main__media{
+    margin-bottom: 16px;
+}
+
+.main__media__img{
+    height: 247px;
+    width: 509px;
+    border-radius: 10px;
+}
+
+.tweet__main__actions{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.actions__div{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.show__link{
+    text-decoration: none;
+}
+
+.show__paragraph{
+    font-weight: 500;
+    font-size:0.813rem;
+    color: var(--PrimaryBlue);
+}
+
