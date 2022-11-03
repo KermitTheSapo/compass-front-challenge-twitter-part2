@@ -1,0 +1,39 @@
+@import url("../../root.css");
+
+.imgIcon{
+    margin-right: 21px;
+}
+.h1-blue{
+    color: var(--PrimaryBlue);
+}
+.h1-dark{
+    color: var(--Black);
+}
+.h1-light{
+    color: var(--White);
+}
+
+.div-menu-item{
+    font-family: 'Nunito', sans-serif;
+}
+.h1-small{
+    font-size: 1rem;
+}
+
+.h1-medium{
+    font-size: 2rem;
+}
+
+.h1-large{
+    font-size: 3rem;
+}
+
+.house-inverted{
+    color: var(--White);
+}
+.house-default{
+    color: var(--Black);    
+}
+.house-selected{
+    color: var(--PrimaryBlue);
+}
