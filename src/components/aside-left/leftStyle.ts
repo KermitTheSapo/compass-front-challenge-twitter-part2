@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 export const AsideLeft = styled.aside`
@@ -93,6 +94,11 @@ export const List__content = styled.span`
     font-size: 1.188rem;
 `
 
+export const LinkStyle = styled(Link)`
+    text-decoration: none;
+    color: var(--Black);
+`
+
 export const btnLargePrimary = styled.button`
 font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -147,6 +153,3 @@ export const profile__options = styled.figure`
 export const optionsImg = styled.img`
 
 `
-
-
-// export const XXXXXXX = styled.XXXX``
