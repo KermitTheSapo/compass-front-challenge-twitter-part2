@@ -1,0 +1,33 @@
+@import url("../../root.css");
+
+.searchBar{
+    background-repeat: no-repeat;
+    background-position: 10px 9px;
+    padding-left: 40px;
+    height: 40px;
+    width: 348px;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    border: none;
+}
+
+.searchBar::placeholder{
+    color: var(--Dark5);
+}
+
+.input-dark{
+    background-color: var(--Dark3);
+    color: var(--Dark6);
+}
+.input-dark::placeholder{
+    color: var(--Dark6);
+}
+.input-light{
+    background-color: var(--Dark7);
+    color: var(--Dark4);
+}
+.input-light::placeholder{
+    color: var(--Dark5);
+}
