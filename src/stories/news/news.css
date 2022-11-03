@@ -1,0 +1,147 @@
+@import url("../../root.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.happening{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.happening--dark{
+    background-color: var(--Dark2);
+}
+
+.happening--light{
+    background-color: var(--Dark8);
+}
+
+.happening__border{
+    height: 1px;
+    width: 100%;
+    
+}
+.happening__border--light{
+    background-color: var(--Dark7);
+}
+.happening__border--dark{
+    background-color: var(--Dark4);
+}
+
+.happening__news{
+    display: flex;
+    height: 120px;
+    padding-left: 15px;
+}
+
+.news__div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+}
+
+.happening__title{
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+    padding-left: 15px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+}
+
+.happening__title--light{
+    color: var(--Black);
+}
+.happening__title--dark{
+    color: var(--White);
+}
+
+.news__content__theme{
+    font-weight: 500;
+    font-size: 0.875rem;
+    
+    margin-bottom: 6px;
+}
+
+.news__content__theme--light{
+    color: var(--Dark5);
+}
+.news__content__theme--dark{
+    color: var(--Dark6);
+}
+
+.news__content__title{
+    font-weight: 700;
+    font-size: 0.938rem;
+    line-height: 17.9px;
+}
+
+.news__content__title--light{
+    color: var(--Black);
+}
+.news__content__title--dark{
+    color: var(--White);
+}
+
+.news__content__div{
+    display: flex;
+}
+
+.content__trending{
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding-right: 4px;
+}
+
+.content__trending--light{
+    color: var(--Dark5);
+}
+.content__trending--dark{
+    color: var(--Dark6);
+}
+
+.content__hashtag{
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--PrimaryBlue);
+}
+
+.news__figure{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.figure__img{
+    border-radius: 10px;
+}
+
+.happening__showMore{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.showMore__link{
+    text-decoration: none;
+}
+
+.showMore__name{
+    color: var(--PrimaryBlue);
+    font-size: 0.938rem;
+}
