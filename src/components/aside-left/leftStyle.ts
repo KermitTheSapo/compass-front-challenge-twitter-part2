@@ -46,15 +46,30 @@ export const asideLeft__link = styled.a`
     text-decoration: none;
 `
 
-export const asideLeft__List = styled.li`
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 30px;
-    gap: 10px;
-    cursor: pointer;
-    color: var(--Black);
+// export const asideLeft__List = styled.li`
+//     width: auto;
+//     display: flex;
+//     align-items: center;
+//     justify-content: start;
+//     height: 30px;
+//     gap: 10px;
+//     cursor: pointer;
+//     color: var(--Black);
+// `
+
+export const asideLeft__List = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 30px;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--Black);
+
+  &:hover {
+    color: var(--PrimaryBlue);
+  }
 `
 
 export const List__figure = styled.figure`
