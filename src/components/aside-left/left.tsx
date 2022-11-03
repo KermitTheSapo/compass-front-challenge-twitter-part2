@@ -19,97 +19,97 @@ import Profile from "../profile/profile"
 
 export default function Left(){
     return(
-        <S.AsideLeft>
-            <S.asideLeft__itemList>
-                <S.itemList__figure>
-                    <S.itemList__figureImg src={TwitterImg} alt="The blue twitter symbol"/>
-                </S.itemList__figure>
-                <R.BrowserRouter>
-                    <S.asideLeft__ul>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={House} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content><R.Link to="/">Home</R.Link></S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={hashtag} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>Explore</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={notification} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>Notifications</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={message} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>Messages</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={bookmark} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>Bookmarks</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={list} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>Lists</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={profile} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content><R.Link to="/profile">Profile</R.Link></S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                        <S.asideLeft__link>
-                            <S.asideLeft__List>
-                                <S.List__figure>
-                                    <S.List__img src={more} alt="The symbol of a blue house"/>
-                                </S.List__figure>
-                                <S.List__content>More</S.List__content>
-                            </S.asideLeft__List>
-                        </S.asideLeft__link>
-                    </S.asideLeft__ul>
-                    <R.Routes>
-                        <R.Route path='/' element={<Main />} />
-                        <R.Route path='/profile' element={<Profile />} />
-                    </R.Routes>
-                </R.BrowserRouter>
-                <S.btnLargePrimary type="button">Tweet</S.btnLargePrimary>
-            </S.asideLeft__itemList>
-            <S.asideLeft__profile>
-                <S.profile__figure>
-                    <S.profile__img src={profilePicture} alt="A profile picture of a person with a black shirt and hair on their face"/>
-                </S.profile__figure>
-                <S.profile__content>
-                    <S.content__name>Jerome Bell</S.content__name>
-                    <S.content__nick>@afonsoinocente</S.content__nick>
-                </S.profile__content>
-                <S.profile__options>
-                    <S.optionsImg src={options} alt="Three black dots"/>
-                </S.profile__options>
-            </S.asideLeft__profile>
-        </S.AsideLeft>
+        <R.BrowserRouter>
+            <S.AsideLeft>
+                <S.asideLeft__itemList>
+                    <S.itemList__figure>
+                        <S.itemList__figureImg src={TwitterImg} alt="The blue twitter symbol"/>
+                    </S.itemList__figure>
+                        <S.asideLeft__ul>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={House} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content><S.LinkStyle to="/">Home</S.LinkStyle></S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={hashtag} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>Explore</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={notification} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>Notifications</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={message} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>Messages</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={bookmark} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>Bookmarks</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={list} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>Lists</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={profile} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content><S.LinkStyle to="/profile">Profile</S.LinkStyle></S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                            <S.asideLeft__link>
+                                <S.asideLeft__List>
+                                    <S.List__figure>
+                                        <S.List__img src={more} alt="The symbol of a blue house"/>
+                                    </S.List__figure>
+                                    <S.List__content>More</S.List__content>
+                                </S.asideLeft__List>
+                            </S.asideLeft__link>
+                        </S.asideLeft__ul>
+                    <S.btnLargePrimary type="button">Tweet</S.btnLargePrimary>
+                </S.asideLeft__itemList>
+                <S.asideLeft__profile>
+                    <S.profile__figure>
+                        <S.profile__img src={profilePicture} alt="A profile picture of a person with a black shirt and hair on their face"/>
+                    </S.profile__figure>
+                    <S.profile__content>
+                        <S.content__name>Jerome Bell</S.content__name>
+                        <S.content__nick>@afonsoinocente</S.content__nick>
+                    </S.profile__content>
+                    <S.profile__options>
+                        <S.optionsImg src={options} alt="Three black dots"/>
+                    </S.profile__options>
+                </S.asideLeft__profile>
+            </S.AsideLeft>
+            <R.Routes>
+                <R.Route path='/' element={<Main />} />
+                <R.Route path='/profile' element={<Profile />} />
+          </R.Routes>
+        </R.BrowserRouter>
     )
 }
