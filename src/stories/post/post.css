@@ -1,0 +1,231 @@
+
+.main{
+    min-height: 80vh;
+    background-color: var(--White);
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.main__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 42.5%;
+    height: 53px;
+    background-color: var(--White);
+    border-right: solid 1px var(--Dark7);
+    border-top: solid 1px var(--Dark7);
+    border-left: solid 1px var(--Dark7);
+}
+
+.main__header__title{
+    font-weight: 700;
+    font-size: 1.188rem;
+    color: var(--Dark);
+    margin-left: 15px;
+}
+.main__header__img{
+    margin-right: 15px;
+}
+
+
+.main__border{
+    width: 40%;
+    height: 1px;
+    background-color: var(--Dark7);
+}
+
+.main__borderHeader{
+    width: 42%;
+    height: 1px;
+    background-color: var(--Dark7);
+
+}
+
+.main__borderScroll{
+    width: 100%;
+    height: 1px;
+    background-color: var(--Dark7);
+}
+
+.post{
+    display: flex;
+    width: 95%;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+
+.post__input{
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    width: 42.6%;
+    margin-bottom: 5px;
+    border-left: solid 1px var(--Dark7);
+    border-right: solid 1px var(--Dark7);
+}
+
+.input__img{
+    border-radius: 50%;
+    margin-right: 13px;
+    margin-left: 15px;
+}
+
+.input__text{
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.post__emoji{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 42.6%;
+    background-color: var(--White);
+    margin-bottom: 20px;
+    border-right: solid 1px var(--Dark7);
+    border-left: solid 1px var(--Dark7);
+}
+
+.emoji__div{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 75px;
+}
+
+.upload__img{
+    text-decoration: none;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    color: red;
+}
+input[type='file'] {
+    display: none
+}
+.label {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.post__submit{
+    height: 39px;
+    width: 77px;
+    border-radius: 9999px;
+    background-color: var(--PrimaryBlue);
+    opacity: 0.5;
+    border: none;
+    outline: none;
+    font-size: 0.938rem;
+    color: var(--White);
+    font-weight: 700;
+}
+.main__margin{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.post__tweet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 378px;
+    border: solid 1px var(--Dark7);
+}
+
+.tweet__figure{
+    height: 94%;
+    margin-right: 11px;
+}
+
+.tweet__figure__img{
+    border-radius: 50%;
+}
+
+.tweet__main{
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet__main__user{
+    display: flex;
+    align-items: center;
+    height: 22px;
+}
+
+.name__text{
+    font-weight: 700;
+    color: var(--Black);
+}
+
+.name__nick, .name__time{
+    font-weight: 500;
+}
+
+.name__dot{
+    font-weight: 400;
+}
+
+.name__nick, .name__dot, .name__time{
+    color: var(--Dark5);
+}
+
+.name__text, .name__nick, .name__dot, .name__time{
+    font-size: 0.938rem;  
+    margin-right: 4px;
+}
+
+.tweet__main__content{
+    height: 18px;
+    font-weight: 500;
+    font-size: 0.938rem;
+    color: var(--Black);
+    margin-bottom: 10px;
+}
+
+.tweet__main__media{
+    margin-bottom: 16px;
+}
+
+.main__media__img{
+    height: 247px;
+    width: 509px;
+    border-radius: 10px;
+}
+
+.tweet__main__actions{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.actions__div{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.heart--status{
+    height: 16.07px;
+    width: 15.19px;
+}
+
+.show__link{
+    text-decoration: none;
+}
+
+.show__paragraph{
+    font-weight: 500;
+    font-size:0.813rem;
+    color: var(--PrimaryBlue);
+}
