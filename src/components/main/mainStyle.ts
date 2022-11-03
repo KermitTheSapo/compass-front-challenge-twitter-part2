@@ -189,12 +189,12 @@ export const name__time = styled.h5`
     margin-right: 4px;
 `
 export const tweet__main__content = styled.p`
-    height: 18px;
     font-weight: 500;
     font-size: 0.938rem;
     color: var(--Black);
     margin-bottom: 10px;
-
+    word-break: break-word;
+    max-width: 80%;
 `
 export const tweet__main__media = styled.div`
     margin-bottom: 16px;
