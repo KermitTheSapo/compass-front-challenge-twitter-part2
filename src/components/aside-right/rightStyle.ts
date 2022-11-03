@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-// import search from "../../assets/imgs/asideRight/search.svg"
+import search from "../../assets/imgs/asideRight/search.svg"
 
 export const asideRight = styled.div`
     display: flex;
@@ -17,7 +17,7 @@ export const asideRight = styled.div`
 
 export const asideRight__input = styled.input`
     width: 300px;
-    /* background-image: url("../../assets/imgs/asideRight/search.svg"); */
+    background-image: url(${search});
     background-repeat: no-repeat;
     background-position: 10px 12px;
     padding-left: 40px;
