@@ -1,0 +1,133 @@
+@import url("../../root.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.follow{
+    background-color: var(--Dark8);
+    width: 350px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.follow--light{
+    background-color: var(--Dark8);
+}
+.follow--dark{
+    background-color: var(--Dark2);
+}
+
+.follow__border{
+    height: 1px;
+    width: 100%;
+}
+
+.follow__border--light{
+    background-color: var(--Dark7);
+}
+.follow__border--dark{
+    background-color: var(--Dark4);
+}
+
+.follow__title{
+    font-weight: 700;
+    font-size: 1.25rem;
+    
+    margin-left: 16px;
+}
+.follow__title--light{
+    color: var(--Black);
+}
+.follow__title--dark{
+    color: var(--White);
+}
+
+.follow__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.content__figure{
+    margin-left: 16px;
+}
+.content__figure__img{
+    border-radius: 50%;
+}
+
+.content__button{
+    background-color: transparent;
+    color: var(--PrimaryBlue);
+    border: solid 1px var(--PrimaryBlue);
+    width: 80px;
+    height: 30px;
+    border-radius: 3rem;
+    font-size: 0.938rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+.content__button:hover{
+    background-color: var(--PrimaryBlue);
+    color: var(--White);
+    border: solid 1px var(--White);
+}
+
+.follow__content__div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.div__button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 16px;
+}
+.follow__content__name{
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: 11px;
+}
+.follow__content__nick{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 11px;
+}
+.follow__content__name--light{
+    color: var(--Black);
+}
+.follow__content__name--dark{
+    color: var(--White);
+}
+.follow__content__nick--light{
+    color: var(--Dark5);
+}
+.follow__content__nick--dark{
+    color: var(--Dark6);
+}
+.follow__content__nick{
+    font-weight: 500;
+    font-size: 1rem;    
+}
+.follow__link{
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.follow__more{
+    color: var(--PrimaryBlue);
+    font-size: 0.938rem;
+}
