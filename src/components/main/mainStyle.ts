@@ -75,7 +75,7 @@ export const input__text = styled.input`
 `
 
 export const post__emoji = styled.div`
-display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
@@ -121,6 +121,7 @@ export const post__submit = styled.button`
     font-size: 0.938rem;
     color: var(--White);
     font-weight: 700;
+    margin-right: 10px;
 `
 
 export const main__borderScroll = styled.div`
