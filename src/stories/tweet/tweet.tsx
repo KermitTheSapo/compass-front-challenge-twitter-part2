@@ -18,12 +18,12 @@ export const Tweet = ({name}:tweetProps) => (
     </figure>
     <div className="tweet__main">
       <div className="tweet__main__user">
-        <h3 className="name__text name__text-${name}">Devon Lane</h3>
-        <h4 className="name__nick name__nick-${name}">@devonlane</h4>
-        <h5 className="name__dot name__dot-${name}">·</h5>
-        <h5 className="name__time name__time-${name}">23s</h5>
+        <h3 className={`name__text name__text-${name}`}>Devon Lane</h3>
+        <h4 className={`name__nick name__nick-${name}`}>@devonlane</h4>
+        <h5 className={`name__dot name__dot-${name}`}>·</h5>
+        <h5 className={`name__time name__time-${name}`}>23s</h5>
       </div>
-      <p className="tweet__main__content tweet__main__content-${name}">Tom is in a big hurry.</p>
+      <p className={`tweet__main__content tweet__main__content-${name}`}>Tom is in a big hurry.</p>
       <div className="tweet__main__media">
         <img className="main__media__img" src={post} alt="Image of an astronaut in a blue suit in a purple space"/>
       </div>
