@@ -16,6 +16,9 @@ import profilePicture from "../../assets/imgs/asideLeft/profile/profilePicture.p
 import options from "../../assets/imgs/asideLeft/profile/options.svg"
 import Main from "../main/main"
 import Profile from "../profile/profile"
+import { Item } from "./item"
+import Error from "../Error/error"
+import { focusInput } from "../../helps/Html"
 
 export default function Left(){
     return(
@@ -26,72 +29,15 @@ export default function Left(){
                         <S.itemList__figureImg src={TwitterImg} alt="The blue twitter symbol"/>
                     </S.itemList__figure>
                         <S.asideLeft__ul>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={House} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content><S.LinkStyle to="/">Home</S.LinkStyle></S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={hashtag} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>Explore</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={notification} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>Notifications</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={message} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>Messages</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={bookmark} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>Bookmarks</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={list} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>Lists</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={profile} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content><S.LinkStyle to="/profile">Profile</S.LinkStyle></S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
-                            <S.asideLeft__link>
-                                <S.asideLeft__List>
-                                    <S.List__figure>
-                                        <S.List__img src={more} alt="The symbol of a blue house"/>
-                                    </S.List__figure>
-                                    <S.List__content>More</S.List__content>
-                                </S.asideLeft__List>
-                            </S.asideLeft__link>
+                            <Item label={"Home"} icon={House} alt="" route="/"/>
+                            <Item label={"Explore"} icon={hashtag} alt="" route="/erro"/>
+                            <Item label={"Notification"} icon={notification} alt="" route="/erro"/>
+                            <Item label={"Messages"} icon={message} alt="" route="/erro"/>
+                            <Item label={"Bookmarks"} icon={bookmark} alt="" route="/erro"/>
+                            <Item label={"profile"} icon={profile} alt="" route="/profile"/>
+                            <Item label={"More"} icon={more} alt="The symbol of a blue house" route="/error"/>
                         </S.asideLeft__ul>
-                    <S.btnLargePrimary type="button">Tweet</S.btnLargePrimary>
+                    <S.btnLargePrimary onClick={() => focusInput("input")} type="button">Tweet</S.btnLargePrimary>
                 </S.asideLeft__itemList>
                 <S.asideLeft__profile>
                     <S.profile__figure>
@@ -109,6 +55,7 @@ export default function Left(){
             <R.Routes>
                 <R.Route path='/' element={<Main />} />
                 <R.Route path='/profile' element={<Profile />} />
+                <R.Route path='/*' element={<Error />} />
           </R.Routes>
         </R.BrowserRouter>
     )
