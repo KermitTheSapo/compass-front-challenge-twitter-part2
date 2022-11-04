@@ -147,3 +147,50 @@
 .content__nick--dark{
     color: var(--Dark6);
 }
+
+
+.storybook-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .storybook-button--primary {
+    color: var(--White);
+    background-color: var(--PrimaryBlue);
+  }
+  .storybook-button--secondary {
+    color:var(--PrimaryBlue);
+    background-color: transparent;
+    height: 30px;
+    width: 228px;
+    padding: 15px, 93px, 15px, 93px;
+    border: 1px solid var(--PrimaryBlue);
+    font-size: 0.938rem;
+    font-weight: 700;
+  }
+  .storybook-button--small {
+    width: 228px;
+    height: 30px;
+    padding: 15px, 93px, 15px, 93px;
+    border: solid 1px var(--PrimaryBlue);
+    font-weight: 700;
+    font-size: 0.938rem;
+  }
+  .storybook-button--medium {
+    width: 228px;
+    height: 39px;
+    padding: 15px, 93px, 15px, 93px;
+    font-size: 0.938rem;
+    outline:none;
+  }
+  .storybook-button--large {
+    width: 228px;
+    height: 49px;
+    padding: 15px, 93px, 15px, 93px;
+    font-size: 0.938rem;
+    outline:none;
+}

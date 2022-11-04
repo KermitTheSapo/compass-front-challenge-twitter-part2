@@ -5,7 +5,7 @@ export default {
   title: 'Components/News',
   component: News,
   argTypes: {
-    name: {control: {type: 'select', options: ["light", "dark"]}},
+    user: {control: {type: 'select', options: ["light", "dark"]}},
   },
 } as ComponentMeta<typeof News>;
 

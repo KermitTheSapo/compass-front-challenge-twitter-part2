@@ -18,6 +18,6 @@ const Template: ComponentStory<typeof MenuItem> = (args) => <MenuItem {...args} 
 export const base = Template.bind({});
 base.args = {
     name: 'house-inverted',
-    color: "dark",
+    color: "light",
     size: "small"
 };

@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof Post> = (args) => <Post {...args} />;
 
 export const base = Template.bind({});
 base.args = {
-  user: "light"
+  name: "light"
 };

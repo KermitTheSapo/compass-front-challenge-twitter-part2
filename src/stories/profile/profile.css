@@ -4,31 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.aside-left__profile{
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 80%;
-}
-
-.actived{
-    color:var(--PrimaryBlue);
-}
-
 .profile__img{
     border-radius: 100%;
 }
 
-.content__name{
-    font-size: 1rem;
-    font-weight: 700;
+.profile-light{
+    color: var(--White);
+}
+
+.profile-dark{
     color: var(--Black);
 }
 
-.content__nick{
-    font-weight: 500;
-    font-size: 1rem;
+.div-profile{
+    font-family: 'Nunito', sans-serif;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.paragraph-light{
+    color: var(--Dark6);
+}
+
+.paragraph-dark{
     color: var(--Dark5);
 }

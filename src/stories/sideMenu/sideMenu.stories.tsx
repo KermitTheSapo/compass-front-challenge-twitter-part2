@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof SideMenu> = (args) => <SideMenu {...args} 
 
 export const base = Template.bind({});
 base.args = {
-    name: 'light',
+    name: "light",
 };

@@ -11,12 +11,12 @@
     align-items: center;
     font-size: 1rem;
     border: none;
+    background-image: url('../../assets/imgs/searchBar/search.svg');
 }
 
 .searchBar::placeholder{
     color: var(--Dark5);
 }
-
 .input-dark{
     background-color: var(--Dark3);
     color: var(--Dark6);

@@ -1,6 +1,6 @@
 import './post.css';
 interface postProps {
-    user?: string;
+    name?: string;
 }
 
 // img.setAttribute("src", "/assets/imgs/post/img.svg")
@@ -10,7 +10,7 @@ interface postProps {
 // calendar.setAttribute("src", "/assets/imgs/post/calendar.svg")
 
 
-export const Post = ({user}:postProps) => (
+export const Post = ({name}:postProps) => (
     <main className="main">
       <header className="main__header">
         <h2 className="main__header__title">Home</h2>
