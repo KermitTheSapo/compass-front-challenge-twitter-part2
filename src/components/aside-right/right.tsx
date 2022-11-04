@@ -1,6 +1,9 @@
 import * as S from "./rightStyle"
 
 import news1 from "../../assets/imgs/asideRight/news1.png"
+import news2 from "../../assets/imgs/asideRight/news2.png"
+import news3 from "../../assets/imgs/asideRight/news3.png"
+import News from "./news/news"
 
 export default function Right(){
     return(
@@ -9,53 +12,11 @@ export default function Right(){
             <S.Happening>
                 <S.happening__title>What’s happening</S.happening__title>
                 <S.happening__border></S.happening__border>
-                <S.happening__news>
-                    <S.news__div>
-                        <S.news__content>
-                            <S.news__content__theme>COVID19 · Last night</S.news__content__theme>
-                            <S.news__content__title>England’s Chief Medical Officer says the UK is at the most dangerous time of the pandemic</S.news__content__title>
-                        </S.news__content>
-                        <S.news__content__div>
-                            <S.content__trending>Trending with</S.content__trending>
-                            <S.content__hashtag>#covid19</S.content__hashtag>
-                        </S.news__content__div>
-                    </S.news__div>
-                    <S.news__figure>
-                        <S.figure__img src={news1} alt="image of a white man"/>
-                    </S.news__figure>
-                </S.happening__news>
+                <News alt="image of a white man" hashtag="#covid19" img={news1} theme="COVID19 · Last night" title="England’s Chief Medical Officer says the UK is at the most dangerous time of the pandemic" trending="Trending with"/>
                 <S.happening__border></S.happening__border>
-                <S.happening__news>
-                    <S.news__div>
-                        <S.news__content>
-                            <S.news__content__theme>COVID19 · Last night</S.news__content__theme>
-                            <S.news__content__title>England’s Chief Medical Officer says the UK is at the most dangerous time of the pandemic</S.news__content__title>
-                        </S.news__content>
-                        <S.news__content__div>
-                            <S.content__trending>Trending with</S.content__trending>
-                            <S.content__hashtag>#covid19</S.content__hashtag>
-                        </S.news__content__div>
-                    </S.news__div>
-                    <S.news__figure>
-                        <S.figure__img src={news1} alt="image of a white man"/>
-                    </S.news__figure>
-                </S.happening__news>
+                <News alt="image of a white man" hashtag="#trump" img={news2} theme="US news · 4h ago" title="Parler may go offline following suspensions by Amazon, Apple and Google" trending="Trending with"/>
                 <S.happening__border></S.happening__border>
-                <S.happening__news>
-                    <S.news__div>
-                        <S.news__content>
-                            <S.news__content__theme>COVID19 · Last night</S.news__content__theme>
-                            <S.news__content__title>England’s Chief Medical Officer says the UK is at the most dangerous time of the pandemic</S.news__content__title>
-                        </S.news__content>
-                        <S.news__content__div>
-                            <S.content__trending>Trending with</S.content__trending>
-                            <S.content__hashtag>#covid19</S.content__hashtag>
-                        </S.news__content__div>
-                    </S.news__div>
-                    <S.news__figure>
-                        <S.figure__img src={news1} alt="image of a white man"/>
-                    </S.news__figure>
-                </S.happening__news>
+                <News alt="image of a white man" hashtag="#sport" img={news3} theme="India · 1h ago" title="India vs Australia: India hold on to earn a draw on Day 5 in Sydney Test" trending="Trending with"/>
                 <S.happening__showMore>
                     <S.showMore__link href="/error_404">
                         <S.showMore__name>Show more</S.showMore__name>
