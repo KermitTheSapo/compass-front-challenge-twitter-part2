@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import light from "./assets/styles/themes/light";
-import dark from "./assets/styles/themes/light";
+import dark from "./assets/styles/themes/dark";
 import { useState } from "react";
 import Login from "./components/login/login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
