@@ -11,7 +11,13 @@ export default {
 
 const Template: ComponentStory<typeof SideMenu> = (args) => <SideMenu {...args} />;
 
-export const base = Template.bind({});
-base.args = {
-    name: "light",
+
+export const light = Template.bind({});
+light.args = {
+  name: "light",
 };
+export const dark = Template.bind({});
+dark.args = {
+  name: "dark",
+};
+

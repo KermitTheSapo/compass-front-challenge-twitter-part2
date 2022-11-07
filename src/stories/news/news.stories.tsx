@@ -11,7 +11,11 @@ export default {
 
 const Template: ComponentStory<typeof News> = (args) => <News {...args} />;
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: "light"
+export const light = Template.bind({});
+light.args = {
+  user: "light",
+};
+export const dark = Template.bind({});
+dark.args = {
+  user: "dark",
 };

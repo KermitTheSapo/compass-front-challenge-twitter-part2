@@ -11,7 +11,12 @@ export default {
 
 const Template: ComponentStory<typeof SearchBar> = (args) => <SearchBar {...args} />;
 
-export const base = Template.bind({});
-base.args = {
-    name: 'light',
+
+export const light = Template.bind({});
+light.args = {
+  name: "light",
+};
+export const dark = Template.bind({});
+dark.args = {
+  name: "dark",
 };

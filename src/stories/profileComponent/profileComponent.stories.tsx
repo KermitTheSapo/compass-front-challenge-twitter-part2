@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof Profile> = (args) => <Profile {...args} />
 
 export const base = Template.bind({});
 base.args = {
-    name: 'light',
+  name: "light",
 };

@@ -11,7 +11,9 @@ export default {
 
 const Template: ComponentStory<typeof Post> = (args) => <Post {...args} />;
 
+
 export const base = Template.bind({});
 base.args = {
-  name: "light"
+  name: "light",
 };
+

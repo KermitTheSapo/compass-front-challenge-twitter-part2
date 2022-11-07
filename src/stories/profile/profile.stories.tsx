@@ -11,7 +11,12 @@ export default {
 
 const Template: ComponentStory<typeof Profile> = (args) => <Profile {...args} />;
 
-export const base = Template.bind({});
-base.args = {
-    name: 'light',
+
+export const light = Template.bind({});
+light.args = {
+  name: "light",
+};
+export const dark = Template.bind({});
+dark.args = {
+  name: "dark",
 };

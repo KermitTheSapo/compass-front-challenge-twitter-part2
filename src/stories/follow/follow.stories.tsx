@@ -11,9 +11,13 @@ export default {
 
 const Template: ComponentStory<typeof Follow> = (args) => <Follow {...args} />;
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  name: "light"
+export const light = Template.bind({});
+light.args = {
+    name: "light",
+};
+export const dark = Template.bind({});
+dark.args = {
+    name: "dark",
 };
 
 // export const base = Template.bind({});
