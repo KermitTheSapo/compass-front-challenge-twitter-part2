@@ -10,6 +10,7 @@ import { useRef, useState } from "react"
 import Post, { PostInterface} from "../post/post"
 
 export default function Main(){
+  const tweetBtn = document.querySelector("#tweet")
   let now = new Date();
 
   const [dataTweet, setDataTweet] = useState<PostInterface[]>([
@@ -28,6 +29,7 @@ export default function Main(){
   const [inputValue, setInputValue] = useState("")
   const [imgValue, setImgValue] = useState("")  
   const inputElement = useRef();
+
 
   const createPost = () =>{    
     const post: PostInterface = {
@@ -79,6 +81,11 @@ export default function Main(){
               value={inputValue}
               onChange={(event) => {
                 setInputValue(event.target.value)
+                if (event.target.value.length > 0){
+                  tweetBtn?.setAttribute("style", "opacity: 1")
+                } else {
+                  tweetBtn?.setAttribute("style", "opacity: 0.5")
+                }
               }}
             />
           </S.post__input>
@@ -114,7 +121,7 @@ export default function Main(){
               <S.icons src={emojiIcon} alt="Happy face icon" />
               <S.icons src={CalendarIcon} alt="Calendar icon" />
             </S.emoji__div>
-            <S.post__submit>Tweet</S.post__submit>
+            <S.post__submit id="tweet" >Tweet</S.post__submit>
           </S.post__emoji>
         </S.post__form>
         <S.main__borderScroll></S.main__borderScroll>
