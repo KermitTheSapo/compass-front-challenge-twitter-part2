@@ -1,15 +1,18 @@
 import Left from "./components/aside-left/left";
-import Right from "./components/aside-right/right";
-import Footer from "./components/footer/footer";
 import * as S from "./appStyle"
+import { ThemeProvider } from "styled-components";
+import light from "./assets/styles/themes/light";
 
 export default function App() {
   return (
-    <S.Div>
-      <Left/>
-      <Right/>
-      <Footer/>
-    </S.Div>
+    <ThemeProvider theme={light}>
+      <S.Div>
+        <Left/>
+        {/*  */}
+        {/* <Footer/> */}
+        {/* <Login/> */}
+      </S.Div>
+    </ThemeProvider>
   )
 }
 
