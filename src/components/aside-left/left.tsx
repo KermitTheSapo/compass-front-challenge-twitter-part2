@@ -19,6 +19,9 @@ import Profile from "../profile/profile"
 import { Item } from "./item"
 import Error from "../Error/error"
 import { focusInput } from "../../helps/Html"
+import Right from "../aside-right/right"
+import Login from "../login/login"
+import Footer from "../footer/footer"
 
 export default function Left(){
     return(
@@ -34,7 +37,8 @@ export default function Left(){
                             <Item label={"Notification"} icon={notification} alt="" route="/erro"/>
                             <Item label={"Messages"} icon={message} alt="" route="/erro"/>
                             <Item label={"Bookmarks"} icon={bookmark} alt="" route="/erro"/>
-                            <Item label={"profile"} icon={profile} alt="" route="/profile"/>
+                            <Item label={"List"} icon={list} alt="" route="/erro"/>
+                            <Item label={"Profile"} icon={profile} alt="" route="/profile"/>
                             <Item label={"More"} icon={more} alt="The symbol of a blue house" route="/error"/>
                         </S.asideLeft__ul>
                     <S.btnLargePrimary onClick={() => focusInput("input")} type="button">Tweet</S.btnLargePrimary>
@@ -52,6 +56,8 @@ export default function Left(){
                     </S.profile__options>
                 </S.asideLeft__profile>
             </S.AsideLeft>
+            <Right/>
+            <Footer/>
             <R.Routes>
                 <R.Route path='/' element={<Main />} />
                 <R.Route path='/profile' element={<Profile />} />
