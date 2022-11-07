@@ -1,4 +1,5 @@
 import * as S from "./profileStyle"
+import * as P from "../post/postStyle"
 
 import Arrow from "../../assets/imgs/profileComponent/arrow.svg"
 import Background from "../../assets/imgs/profileComponent/backgroundImg.png"
@@ -74,46 +75,46 @@ export default function Profile(){
                 </S.MainProfile__content>
             </S.MainProfile>
             {tweet.map((item) =>(
-                    <S.post__tweet>
-                        <S.tweet__figure>
-                            <S.tweet__figure__img src="./src/assets/imgs/main/profileDevon.svg" alt="Image of a woman with blonde hair, brown coat and white blouse"/>
-                        </S.tweet__figure>
-                        <S.tweet__main >
-                            <S.tweet__main__user >
-                                <S.name__text>Devon Lane</S.name__text>
-                                <S.name__nick>@johndue</S.name__nick>
-                                <S.name__dot >·</S.name__dot>
-                                <S.name__time >{item.time}s</S.name__time>
-                            </S.tweet__main__user>
-                            <S.tweet__main__content >{item.content}</S.tweet__main__content>
-                            <S.tweet__main__media >
-                                <S.main__media__img src="./src/assets/imgs/main/astronaut.png" alt="Image of an astronaut in a blue suit in a purple space"/>
-                            </S.tweet__main__media>
-                            <S.tweet__main__actions >
-                                <S.actions__div >
-                                    <S.actionsImg src={comment} alt="Bubble chat icon"/>
+                    <P.post__tweet>
+                        <P.tweet__figure>
+                            <P.tweet__figure__img src="./src/assets/imgs/main/profileDevon.svg" alt="Image of a woman with blonde hair, brown coat and white blouse"/>
+                        </P.tweet__figure>
+                        <P.tweet__main >
+                            <P.tweet__main__user >
+                                <P.name__text>Devon Lane</P.name__text>
+                                <P.name__nick>@johndue</P.name__nick>
+                                <P.name__dot >·</P.name__dot>
+                                <P.name__time >{item.time}s</P.name__time>
+                            </P.tweet__main__user>
+                            <P.tweet__main__content >{item.content}</P.tweet__main__content>
+                            <P.tweet__main__media >
+                                <P.main__media__img src="./src/assets/imgs/main/astronaut.png" alt="Image of an astronaut in a blue suit in a purple space"/>
+                            </P.tweet__main__media>
+                            <P.tweet__main__actions >
+                                <P.actions__div >
+                                    <P.actionsImg src={comment} alt="Bubble chat icon"/>
                                     <span>0</span>
-                                </S.actions__div>
-                                <S.actions__div >
-                                    <S.actionsImg src={retweet} alt="Retweet related two arrow symbol"/>
+                                </P.actions__div>
+                                <P.actions__div >
+                                    <P.actionsImg src={retweet} alt="Retweet related two arrow symbol"/>
                                     <span>0</span>
-                                </S.actions__div>
-                                <S.actions__div>
-                                    <S.actionsImg src={likeDisabled} alt="Red heart symbol"/>
+                                </P.actions__div>
+                                <P.actions__div>
+                                    <P.actionsImg src={likeDisabled} alt="Red heart symbol"/>
                                     <span>0</span>
-                                </S.actions__div>
-                                <S.actions__div >
-                                    <S.actionsImg src={share} alt="An arrow symbol with a dash below, related to sharing the post"/>
+                                </P.actions__div>
+                                <P.actions__div >
+                                    <P.actionsImg src={share} alt="An arrow symbol with a dash below, related to sharing the post"/>
                                     <span>0</span>
-                                </S.actions__div>
-                            </S.tweet__main__actions>
-                            <S.tweet__main__show>
-                                <S.show__link href="" >
-                                    <S.show__paragraph >Show this thread</S.show__paragraph>
-                                </S.show__link>
-                            </S.tweet__main__show>
-                        </S.tweet__main>
-                    </S.post__tweet>
+                                </P.actions__div>
+                            </P.tweet__main__actions>
+                            <P.tweet__main__show>
+                                <P.show__link href="" >
+                                    <P.show__paragraph >Show this thread</P.show__paragraph>
+                                </P.show__link>
+                            </P.tweet__main__show>
+                        </P.tweet__main>
+                    </P.post__tweet>
                     ))}
         </S.Profile>
     )
