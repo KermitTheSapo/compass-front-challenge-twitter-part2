@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 export const SectionLogin = styled.section`
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     background-color: var(--White);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 `
 
-export const LoginDiv = styled.div`
+export const LoginDiv = styled.form`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -66,4 +66,9 @@ export const Paragraph = styled.p`
     font-family: 'Roboto', sans-serif;
 `
 
-
+export const ParagraphError = styled.p`
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: red;
+    font-family: 'Roboto', sans-serif;
+`
