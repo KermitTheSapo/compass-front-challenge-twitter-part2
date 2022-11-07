@@ -44,6 +44,7 @@ export default function Main(){
       imgs: imgValue
     }
     setDataTweet([...dataTweet, post])
+    localStorage.setItem("post", JSON.stringify([...dataTweet, post]))
     setInputValue("")
     setImgValue("")
   }
