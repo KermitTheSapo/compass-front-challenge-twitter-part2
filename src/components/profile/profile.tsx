@@ -21,6 +21,9 @@ export default function Profile(){
         content: "aaaaaaaaaaa"
     }])
 
+    let postData = localStorage.getItem("post")
+    var postObj = JSON.parse(postData)
+
     return(
         <S.Profile>
             <S.Header>
@@ -74,7 +77,7 @@ export default function Profile(){
                     </S.DivContent>
                 </S.MainProfile__content>
             </S.MainProfile>
-            {tweet.map((item) =>(
+            {postObj.map((item) =>(
                     <P.post__tweet>
                         <P.tweet__figure>
                             <P.tweet__figure__img src="./src/assets/imgs/main/profileDevon.svg" alt="Image of a woman with blonde hair, brown coat and white blouse"/>
@@ -84,7 +87,7 @@ export default function Profile(){
                                 <P.name__text>Devon Lane</P.name__text>
                                 <P.name__nick>@johndue</P.name__nick>
                                 <P.name__dot >·</P.name__dot>
-                                <P.name__time >{item.time}s</P.name__time>
+                                <P.name__time >{item.name}s</P.name__time>
                             </P.tweet__main__user>
                             <P.tweet__main__content >{item.content}</P.tweet__main__content>
                             <P.tweet__main__media >
