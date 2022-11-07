@@ -1,6 +1,4 @@
-//@ts-nocheck 
 import * as S from "./mainStyle"
-
 import darkLightMode from "../../assets/imgs/main/darkLightMode.svg"
 import profile from "../../assets/imgs/main/profile.png"
 import imgIcon from "../../assets/imgs/main/imgIcon.svg"
@@ -8,79 +6,45 @@ import gifIcon from "../../assets/imgs/main/gifIcon.svg"
 import graphIcon from "../../assets/imgs/main/graphIcon.svg"
 import emojiIcon from "../../assets/imgs/main/emojiIcon.svg"
 import CalendarIcon from "../../assets/imgs/main/CalendarIcon.svg"
-
-import comment from "../../assets/imgs/main/comment.svg"
-import retweet from "../../assets/imgs/main/retweet.svg"
-import likeDisabled from "../../assets/imgs/main/like-disabled.svg"
-import share from "../../assets/imgs/main/share.svg"
 import { useRef, useState } from "react"
-import { focusInput } from "../../helps/Html"
+import Post, { PostInterface} from "../post/post"
+
 export default function Main(){
-  const [tweet, setTweet] = useState([
-    {
-      time: "aaaaaaa",
-      content: "aaaaaaaaaaa",
-      imgs: "./src/assets/imgs/main/astronaut.png"
-    },
-  ]);
   let now = new Date();
 
-  const [heart, setHeart] = useState(0);
-
-  const [text, setText] = useState("");
-  let counter = 0;
-  function Like() {
-    if (counter === 0) {
-      setHeart(1);
-      counter = 1;
-    } else if (counter === 1) {
-      setHeart(0);
+  const [dataTweet, setDataTweet] = useState<PostInterface[]>([
+    {
+      name: "Jerome Bell",
+      userName: "@afonsoinocente",
+      time: `${now.getHours()}h${now.getMinutes()}m`,
+      content: "Where's the compass?",
+      imgs: "https://miro.medium.com/max/356/1*EnF9uIN_u2_X7ey24lB7Tg.png",
+      commentValue: 0,
+      retweetValue: 0,
+      likeValue: 0,
+      shareValue: 0,
     }
-  }
-
-//   function add() {
-//     setTweet([
-//       ...tweet,
-//       { time: `${now.getHours()}h${now.getMinutes()}m`, content: text },
-//     ]),
-//       setText("");
-//   }
-  function Listener(e) {
-    setText(e.target.value);
-  }
-
+  ]);
+  const [inputValue, setInputValue] = useState("")
+  const [imgValue, setImgValue] = useState("")  
   const inputElement = useRef();
 
-  const getElement = (id: string, idInput: string) => {
-    const imgPost = document.querySelector(`#${id}`) as HTMLElement
-    const inputPost = document.querySelector(`#${idInput}`) as HTMLElement
-    showImg(imgPost.files, inputPost.value)
-  };
-
-  function showImg(files, input) {
-      if (files && files[0]) {
-        const reader = new FileReader();
-        var src = "";
-        reader.onload = function (e) {
-          // @ts-ignore
-          src = e.target?.result;
-          console.log(src)
-          console.log(input)
-          if (input.length > 0 || src.length > 0){
-            createPost(src, input);
-          }
-        };
-        reader.readAsDataURL(files[0]);
-      }
+  const createPost = () =>{    
+    const post: PostInterface = {
+      time: `${now.getHours()}h${now.getMinutes()}m`,
+      commentValue: 0,
+      content: inputValue,
+      likeValue: 0,
+      retweetValue: 0,
+      name: "Jerome Bell",
+      shareValue: 0,
+      userName: "@afonsoinocente",
+      imgs: imgValue
     }
-    // @ts-ignore
-    const uploadImage = (e) => {
-      e.preventDefault();
-    };
-
-    function createPost(src, input) {
-        setTweet([...tweet, { time: `${now.getHours()}h${now.getMinutes()}m`, content: text, imgs: src }])
-    }
+    setDataTweet([...dataTweet, post])
+    setInputValue("")
+    setImgValue("")
+  }
 
   return (
     <S.Main>
@@ -91,8 +55,13 @@ export default function Main(){
       <S.main__borderHeader></S.main__borderHeader>
       <S.Post>
         <S.post__form
-          onSubmit={(e) => e.preventDefault()}
-          action=""
+          onSubmit={(e) => {e.preventDefault()
+            if (inputValue.length > 0 || imgValue.length > 0){
+              createPost()
+              return;
+            }
+            alert("You need to write something or add an image")
+        }}
           method="post"
         >
           <S.post__input>
@@ -103,12 +72,14 @@ export default function Main(){
             <S.input__text
               id="input"
               ref={inputElement}
-              value={text}
-              onChange={(e) => Listener(e)}
               type="text"
               placeholder="What's happening?"
               minLength={2}
               maxLength={380}
+              value={inputValue}
+              onChange={(event) => {
+                setInputValue(event.target.value)
+              }}
             />
           </S.post__input>
           <S.post__emoji>
@@ -125,79 +96,31 @@ export default function Main(){
                 name="file"
                 accept="image/png, image/jpeg"
                 multiple
+                onChange={(event) => {
+                  const files = event.target.files[0]
+                  console.log(files)
+                  const reader = new FileReader()
+                  reader.onload = (eventReader) => {
+                    setImgValue(eventReader.target?.result)
+                  }
+                  reader.readAsDataURL(files)
+                  setTimeout(() => {
+                    event.target.value = ""
+                  }, 500)
+                }}
               />
               <S.icons src={gifIcon} alt="A square with 'GIF' inside" />
               <S.icons src={graphIcon} alt="A chart icon" />
               <S.icons src={emojiIcon} alt="Happy face icon" />
               <S.icons src={CalendarIcon} alt="Calendar icon" />
             </S.emoji__div>
-            <S.post__submit
-              onClick={(e) => {
-                e.preventDefault();
-                getElement("upload", "input")
-              }}
-            >
-              Tweet
-            </S.post__submit>
+            <S.post__submit>Tweet</S.post__submit>
           </S.post__emoji>
         </S.post__form>
         <S.main__borderScroll></S.main__borderScroll>
 
         <S.main__margin>
-          {tweet.map((item) => (
-            <S.post__tweet>
-              <S.tweet__figure>
-                <S.tweet__figure__img
-                  src="./src/assets/imgs/main/profileDevon.svg"
-                  alt="Image of a woman with blonde hair, brown coat and white blouse"
-                />
-              </S.tweet__figure>
-              <S.tweet__main>
-                <S.tweet__main__user>
-                  <S.name__text>Devon Lane</S.name__text>
-                  <S.name__nick>@johndue</S.name__nick>
-                  <S.name__dot>·</S.name__dot>
-                  <S.name__time>{item.time}s</S.name__time>
-                </S.tweet__main__user>
-                <S.tweet__main__content>{item.content}</S.tweet__main__content>
-                <S.tweet__main__media>
-                  <S.main__media__img
-                    src={item.imgs}
-                    alt="Image of an astronaut in a blue suit in a purple space"
-                  />
-                </S.tweet__main__media>
-                <S.tweet__main__actions>
-                  <S.actions__div>
-                    <S.actionsImg src={comment} alt="Bubble chat icon" />
-                    <span>0</span>
-                  </S.actions__div>
-                  <S.actions__div>
-                    <S.actionsImg
-                      src={retweet}
-                      alt="Retweet related two arrow symbol"
-                    />
-                    <span>0</span>
-                  </S.actions__div>
-                  <S.actions__div onClick={() => Like()}>
-                    <S.actionsImg src={likeDisabled} alt="Red heart symbol" />
-                    <span>{heart}</span>
-                  </S.actions__div>
-                  <S.actions__div>
-                    <S.actionsImg
-                      src={share}
-                      alt="An arrow symbol with a dash below, related to sharing the post"
-                    />
-                    <span>0</span>
-                  </S.actions__div>
-                </S.tweet__main__actions>
-                <S.tweet__main__show>
-                  <S.show__link href="">
-                    <S.show__paragraph>Show this thread</S.show__paragraph>
-                  </S.show__link>
-                </S.tweet__main__show>
-              </S.tweet__main>
-            </S.post__tweet>
-          ))}
+          {dataTweet.map((data) => <Post data={data}/>)}        
           <S.main__borderScrolll></S.main__borderScrolll>
         </S.main__margin>
         <S.Margin></S.Margin>
