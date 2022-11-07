@@ -7,7 +7,6 @@ export const ErrorDiv = styled.div`
     background-color: var(--White);
     position: absolute;
     z-index: 3px;
-    border: solid;
     display: flex;
     align-items: center;
     justify-content: center;
