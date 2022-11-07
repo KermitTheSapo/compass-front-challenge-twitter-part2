@@ -41,28 +41,59 @@
 
 Recreating the twitter page, using Typescript and storybook
 
+Npm run dev for localhost and npm run storybook for storybook
+
 ---
 
 ## Features
 
-<!-- - [X] Aside
+- [X] Aside-left
   - [X] stylization
   - [X] Structure
-  - [X] What’s happening
-  - [X] Who to follow
-- [X] Main
+  - [X] routes
+- [X] aside right
+    - [X] structure
     - [X] stylization
-    - [X] Structure
+- [ ] main
+    - [ ] You should be able to insert comments
     - [X] Add Publication
-    - [X] Add IMG
+    - [X] add img
     - [X] The page must have scroll in the middle column (2 or 3 more posts appear)
-    - [X] 380 characters for text post and photo insert functionality
-    - [X] Post time stamp  
-- [X] Footer
+    - [ ] time
+    - [X] btn with focus
+- [ ] footer
     - [X] stylization
-    - [X] Structure
-- [X] StoryBook
-  - [X] add -->
+    - [X] disappear and appear if you are logged in
+    - [X] structure
+- [ ] dark mode
+- [X] profile
+    - [X] structure
+    - [X] stylization
+- [ ] Login
+    - [ ] Save to LocalStorage
+    - [ ] mock
+    - [ ] Validation if you are logged in or not.
+    - [ ] If the user is not logged in, a popup should appear to log in.
+    - [ ] Does not allow posting if not logged in
+- [X] storybook
+    - [X] avatar
+    - [X] button
+    - [X] colors
+    - [X] follow
+    - [X] header
+    - [X] icons
+    - [X] menu-item
+    - [X] news
+    - [X] post
+    - [X] profile
+    - [X] profileComponent
+    - [X] searchBar
+    - [X] sideMenu
+    - [X] tabbar
+    - [X] TabbarItem
+    - [X] tweet
+    - [X] introduction
+  
 ---
 
 ## Author
