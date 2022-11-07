@@ -6,7 +6,7 @@ import twitter from "/src/assets/imgs/asideLeft/white/twitter.svg"
 export default function Login(){
     const registeredLogin = {
         name: "admin",
-        password: "admin"
+        password: "senha"
     }
     const loginInput = document.querySelector("#login")
     const passwordInput = document.querySelector("#password")
@@ -14,24 +14,23 @@ export default function Login(){
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
     const [errorLogin, setErrorLogin] = useState(false)
-
-    // const [local, setLocal] = useState({
-    //     name: login,
-    //     password: password
-    // })
-    // doing the localstorage
-
+    // console.log(loginData)
+    // console.log(passwordData)
+    // console.log(loginObj)
+    // console.log(passwordObj)
     const keepCredentials = () =>{
         if (login.length > 0 && password.length > 0){
             if(login === registeredLogin.name && password === registeredLogin.password){
-                alert("Successfully logged in!")     
+                localStorage.setItem("name", JSON.stringify(login))
+                localStorage.setItem("password", JSON.stringify(password))
+                console.log(localStorage.getItem("name"))
+                alert("Successfully logged in!")
                 setLogin("")      
                 setPassword("")
                 setErrorLogin(false)
                 loginInput?.setAttribute("style", "border: 1px solid #00000033;")
                 passwordInput?.setAttribute("style", "border: 1px solid #00000033;")
                 document.location.pathname = "/home"
-                // another route
             }else{
                 alert("Incorrect login or password!")
                 setErrorLogin(true)
