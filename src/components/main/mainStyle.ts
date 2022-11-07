@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
     min-height: 80vh;
+    /* background-color: ${props => props.theme.colors.primary}; */
     background-color: var(--White);
     width: 45vw;
     display: flex;
