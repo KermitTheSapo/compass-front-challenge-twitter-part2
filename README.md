@@ -41,7 +41,9 @@
 
 Recreating the twitter page, using Typescript and storybook
 
-Npm run dev for localhost and npm run storybook for storybook
+"npm install" for install the dependence 
+"Npm run dev" for localhost
+"npm run storybook" for storybook
 
 ---
 
@@ -61,20 +63,20 @@ Npm run dev for localhost and npm run storybook for storybook
     - [X] The page must have scroll in the middle column (2 or 3 more posts appear)
     - [ ] time
     - [X] btn with focus
-- [ ] footer
+- [X] footer
     - [X] stylization
-    - [ ] disappear and appear if you are logged in
+    - [X] disappear and appear if you are logged in
     - [X] structure
-- [ ] dark mode
+- [X] dark mode
 - [X] profile
     - [X] structure
     - [X] stylization
-- [ ] Login
+- [X] Login
     - [X] Save to LocalStorage
     - [X] mock
-    - [ ] Validation if you are logged in or not.
-    - [ ] If the user is not logged in, a popup should appear to log in.
-    - [ ] Does not allow posting if not logged in
+    - [X] Validation if you are logged in or not.
+    - [X] If the user is not logged in, a popup should appear to log in.
+    - [X] Does not allow posting if not logged in
 - [X] storybook
     - [X] avatar
     - [X] button
