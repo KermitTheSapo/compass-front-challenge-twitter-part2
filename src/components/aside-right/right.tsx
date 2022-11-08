@@ -43,11 +43,11 @@ export default function Right(){
                 <S.follow__border></S.follow__border>
                 <S.follow__content>
                     <S.content__figure>
-                        <S.content__figure__img src="./src/assets/imgs/asideRight/bessieCooper.png" alt="Photo of a man with long hair and a green shirt"/>
+                        <S.content__figure__img src="./src/assets/imgs/asideRight/jenny.png" alt="Photo of a man with long hair and a green shirt"/>
                     </S.content__figure>
                     <S.follow__content__div>
-                        <S.follow__content__name >Bessie Cooper</S.follow__content__name>
-                        <S.follow__content__nick >@alessandroveronezi</S.follow__content__nick>
+                        <S.follow__content__name >Jenny Wilson</S.follow__content__name>
+                        <S.follow__content__nick >@gabrielcantarin</S.follow__content__nick>
                     </S.follow__content__div>
                     <S.div__button >
                         <S.follow__link href="error_404">
