@@ -1,29 +1,13 @@
 import * as S from "./profileStyle"
-import * as P from "../post/postStyle"
-
 import Arrow from "../../assets/imgs/profileComponent/arrow.svg"
 import Background from "../../assets/imgs/profileComponent/backgroundImg.png"
 import Localization from "../../assets/imgs/profileComponent/localization.svg"
 import calendar from "../../assets/imgs/profileComponent/calendar.svg"
 import profile from "../../assets/imgs/profileComponent/ProfilePicture.png"
-import comment from "../../assets/imgs/main/comment.svg"
-import retweet from "../../assets/imgs/main/retweet.svg"
-import likeDisabled from "../../assets/imgs/main/like-disabled.svg"
-import share from "../../assets/imgs/main/share.svg"
-import { useState } from "react"
+import Post from "../post/post"
 export default function Profile(){
-
-    const [tweet, setTweet] = useState([{
-        time: "aaaaaaa",
-        content: "aaaaaaaaaaa"
-    },{
-        time: "aaaaaaa",
-        content: "aaaaaaaaaaa"
-    }])
-
     let postData = localStorage.getItem("post")
     var postObj = JSON.parse(postData)
-
     return(
         <S.Profile>
             <S.Header>
@@ -77,7 +61,11 @@ export default function Profile(){
                     </S.DivContent>
                 </S.MainProfile__content>
             </S.MainProfile>
-            {postObj.map((item) =>(
+            <S.DivPost>
+                
+                {postObj && postObj.map((data) => <Post data={data}/>)}  
+            </S.DivPost>    
+            {/* {postObj.map((item) =>(
                     <P.post__tweet>
                         <P.tweet__figure>
                             <P.tweet__figure__img src="./src/assets/imgs/main/profileDevon.svg" alt="Image of a woman with blonde hair, brown coat and white blouse"/>
@@ -118,7 +106,7 @@ export default function Profile(){
                             </P.tweet__main__show>
                         </P.tweet__main>
                     </P.post__tweet>
-                    ))}
+                    ))} */}
         </S.Profile>
     )
 }
