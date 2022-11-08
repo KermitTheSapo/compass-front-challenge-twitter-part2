@@ -6,43 +6,33 @@ import gifIcon from "../../assets/imgs/main/gifIcon.svg"
 import graphIcon from "../../assets/imgs/main/graphIcon.svg"
 import emojiIcon from "../../assets/imgs/main/emojiIcon.svg"
 import CalendarIcon from "../../assets/imgs/main/CalendarIcon.svg"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Post, { PostInterface} from "../post/post"
+import { useNavigate } from "react-router-dom"
 
+interface Props {
+  toggleTheme(): void;
+}
 
-// let loginData = localStorage.getItem("name")
-// let passwordData = localStorage.getItem("password")
-// var loginObj = JSON.parse(loginData)
-// var passwordObj = JSON.parse(passwordData)  
-  
-// if(loginObj === "admin" && passwordObj === "senha") {
-// } else{
-//     // console.log("asd")
-//     document.location.pathname = "/"
-// }
-
-// setTimeout(() => {
-// }, 500)
-
-
-
-// if (!(loginObj === "admin") && !(passwordObj === "senha")){
-//     let userAnswer = confirm("The user is not connected to an account, please go back to the login page to login or enjoy the guest version")
-//     if (userAnswer === true){
-//         document.location.pathname = "/"
-//         userAnswer = false
-//         loginObj = "admin"
-//         passwordObj = "password"
-//     }
-// } else if(!(loginObj === "admin") && !(passwordObj === "senha")){
-//     console.log("senha errada")
-//     // document.location.pathname = "/login"
-// } else{
-//     console.log(passwordObj)
-//     console.log("deu bom")
-// }
-
-export default function Main(){
+export default function Main({ toggleTheme }: Props){
+  let loginData = localStorage.getItem("name")
+  let passwordData = localStorage.getItem("password")
+  var loginObj = JSON.parse(loginData)
+  var passwordObj = JSON.parse(passwordData)  
+  const navigate = useNavigate()
+  const [isGuess, setIsGuess] = useState(false)
+  useEffect(() => {
+    if(loginObj === "admin" && passwordObj === "admin") {
+    } else{
+      let userAnswer = confirm("The user is not connected to an account, please go back to the login page to login or enjoy the guest version")
+      if (userAnswer === true){
+        navigate("/")
+      }
+      else{
+        setIsGuess(true)
+      }
+    }
+  }, [navigate])
 
 
   const tweetBtn = document.querySelector("#tweet")
@@ -88,17 +78,23 @@ export default function Main(){
     <S.Main>
       <S.main__header>
         <S.main__header__title>Home</S.main__header__title>
-        <S.main__header__img src={darkLightMode} alt="Three blue stars" />
+        <S.main__header__img src={darkLightMode} alt="Three blue stars" onClick={() => toggleTheme()}/>
       </S.main__header>
       <S.main__borderHeader></S.main__borderHeader>
       <S.Post>
         <S.post__form
           onSubmit={(e) => {e.preventDefault()
-            if (inputValue.length > 0 || imgValue.length > 0){
-              createPost()
+            if (isGuess === true){
+              alert("You are in guest mode, you can't post")
               return;
+            } else{
+              if (inputValue.length > 0 || imgValue.length > 0){
+                createPost()
+                return;
+              } else{
+                alert("You need to write something or add an image")
+              }
             }
-            alert("You need to write something or add an image")
         }}
           method="post"
         >
