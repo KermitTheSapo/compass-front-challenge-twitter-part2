@@ -32,8 +32,9 @@ export const InputLogin = styled.input`
     height: 70px;
     border-radius: 6px;
     background-color: transparent;
-    border: 1px solid #00000033;
+    border: 1px solid ${props => props.theme.colors.border};
     font-size: 1.125rem;
+    color: ${props => props.theme.colors.text};
     padding-left: 20px;
     font-family: 'Roboto', sans-serif;
 `
