@@ -9,11 +9,11 @@ import bookmark from "../../assets/imgs/asideLeft/white/bookmark.svg";
 import list from "../../assets/imgs/asideLeft/white/list.svg";
 import profile from "../../assets/imgs/asideLeft/white/profile.svg";
 import more from "../../assets/imgs/asideLeft/white/more.svg";
-
 import profilePicture from "../../assets/imgs/asideLeft/profile/profilePicture.png";
 import options from "../../assets/imgs/asideLeft/profile/options.svg"
+
 import { Item } from "./item";
-import { focusInput } from "../../helps/Html";
+import { focusInput } from "../../utils/Html";
 export default function Left() {
   return (
     <S.AsideLeft>
@@ -27,24 +27,16 @@ export default function Left() {
         <S.asideLeft__ul>
           <Item label={"Home"} icon={House} alt="" route="/home" />
           <Item label={"Explore"} icon={hashtag} alt="" route="/erro" />
-          <Item
-            label={"Notification"}
-            icon={notification}
-            alt=""
-            route="/erro"
-          />
+          <Item label={"Notification"} icon={notification} alt="" route="/erro" />
           <Item label={"Messages"} icon={message} alt="" route="/erro" />
           <Item label={"Bookmarks"} icon={bookmark} alt="" route="/erro" />
           <Item label={"List"} icon={list} alt="" route="/erro" />
           <Item label={"Profile"} icon={profile} alt="" route="/profile" />
-          <Item
-            label={"More"}
-            icon={more}
-            alt="The symbol of a blue house"
-            route="/error"
-          />
+          <Item label={"More"} icon={more} alt="The symbol of a blue house" route="/error" />
         </S.asideLeft__ul>
-        <S.btnLargePrimary onClick={() => focusInput("input")} type="button">
+        <S.btnLargePrimary onClick={() => {
+              focusInput("input")
+          }} type="button">
           Tweet
         </S.btnLargePrimary>
       </S.asideLeft__itemList>
