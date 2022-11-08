@@ -5,7 +5,7 @@ type Response<T> = [
     Dispatch<SetStateAction<T>>
 ]
 
-function keepState<T>(key: string, defaultValue: T): Response<T> {
+export default function keepState<T>(key: string, defaultValue: T): Response<T> {
     const [state, setState] = useState(() => {
         const storageValue = localStorage.getItem(key);
         if (storageValue){
@@ -21,5 +21,3 @@ function keepState<T>(key: string, defaultValue: T): Response<T> {
 
     return [state, setState];
 }
-
-export default keepState;
