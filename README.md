@@ -63,15 +63,15 @@ Npm run dev for localhost and npm run storybook for storybook
     - [X] btn with focus
 - [ ] footer
     - [X] stylization
-    - [X] disappear and appear if you are logged in
+    - [ ] disappear and appear if you are logged in
     - [X] structure
 - [ ] dark mode
 - [X] profile
     - [X] structure
     - [X] stylization
 - [ ] Login
-    - [ ] Save to LocalStorage
-    - [ ] mock
+    - [X] Save to LocalStorage
+    - [X] mock
     - [ ] Validation if you are logged in or not.
     - [ ] If the user is not logged in, a popup should appear to log in.
     - [ ] Does not allow posting if not logged in
