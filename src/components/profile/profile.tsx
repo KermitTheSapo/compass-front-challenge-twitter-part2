@@ -5,9 +5,25 @@ import Localization from "../../assets/imgs/profileComponent/localization.svg"
 import calendar from "../../assets/imgs/profileComponent/calendar.svg"
 import profile from "../../assets/imgs/profileComponent/ProfilePicture.png"
 import Post from "../post/post"
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 export default function Profile(){
     let postData = localStorage.getItem("post")
     var postObj = JSON.parse(postData)
+    let loginData = localStorage.getItem("name")
+    let passwordData = localStorage.getItem("password")
+    var loginObj = JSON.parse(loginData)
+    var passwordObj = JSON.parse(passwordData)
+    const navigate = useNavigate()
+    useEffect(() => {
+        if(loginObj === "admin" && passwordObj === "admin") {
+        } else{
+        let userAnswer = confirm("The user is not connected to an account, please go back to the login page to login or enjoy the guest version")
+        if (userAnswer === true){
+            navigate("/")
+        }
+    }
+  }, [navigate])
     return(
         <S.Profile>
             <S.Header>
