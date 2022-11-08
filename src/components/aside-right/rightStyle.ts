@@ -26,7 +26,7 @@ export const asideRight__input = styled.input`
     display: flex;
     align-items: center;
     font-size: 1rem;
-    background-color: var(--Dark7);
+    background-color: ${props => props.theme.colors.input};
     margin-top: 10px;
     margin-bottom: 15px;
     border: none;
@@ -38,15 +38,15 @@ export const Happening = styled.section`
     align-items: flex-start;
     flex-direction: column;
     width: 350px;
-    background-color: var(--Dark8);
+    background-color: ${props => props.theme.colors.happeningDiv};
     border-radius: 16px;
     margin-bottom: 15px;
-`
+    `
 
 export const happening__title = styled.h2`
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
     padding-left: 15px;
     padding-top: 11px;
     padding-bottom: 10px;
@@ -55,7 +55,7 @@ export const happening__title = styled.h2`
 export const happening__border = styled.div`
     height: 1px;
     width: 100%;
-    background-color: var(--Dark7);
+    background-color: ${props => props.theme.colors.border};
 `
 
 export const happening__showMore = styled.div`
@@ -77,7 +77,7 @@ export const showMore__name = styled.h4`
 `
 
 export const follow = styled.section`
-    background-color: var(--Dark8);
+    background-color: ${props => props.theme.colors.happeningDiv};
     width: 350px;
     display: flex;
     align-items: flex-start;
@@ -90,14 +90,14 @@ export const follow = styled.section`
 export const follow__title = styled.h3`
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
     margin-left: 16px;
 `
 
 export const follow__border = styled.div`
     height: 1px;
     width: 100%;
-    background-color: var(--Dark7);
+    background-color: ${props => props.theme.colors.border};
 `
 
 export const follow__content = styled.div`
@@ -125,14 +125,14 @@ export const follow__content__div = styled.div`
 export const follow__content__name = styled.h4`
     font-weight: 700;
     font-size: 1rem;
-    color: var(--Black);
     margin-left: 11px;
+    color: ${props => props.theme.colors.text};
 `
 
 export const follow__content__nick = styled.p`
     font-weight: 500;
     font-size: 1rem;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};
     margin-left: 11px;
 `
 
@@ -179,6 +179,7 @@ export const follow__terms = styled.p`
     font-size: 0.813rem;
     width: 80%;
     margin-top: 15px;
+    color: ${props => props.theme.colors.paragraph};
 `
 
 

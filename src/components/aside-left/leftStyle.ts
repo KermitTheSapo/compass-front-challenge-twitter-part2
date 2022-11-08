@@ -43,47 +43,6 @@ export const asideLeft__ul = styled.ul`
     width: 75%;
 `
 
-export const asideLeft__link = styled.a`
-    text-decoration: none;
-`
-
-// export const asideLeft__List = styled.li`
-//     width: auto;
-//     display: flex;
-//     align-items: center;
-//     justify-content: start;
-//     height: 30px;
-//     gap: 10px;
-//     cursor: pointer;
-//     color: var(--Black);
-// `
-
-export const asideLeft__List = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
-  width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  height: 30px;
-  gap: 10px;
-  cursor: pointer;
-  color: var(--Black);
-
-  &:hover {
-    color: var(--PrimaryBlue);
-  }
-`
-
-export const List__figure = styled.figure`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-width: 40px;
-`
-
-export const List__img = styled.img`
-
-`
 export const List__content = styled.span`
     height: 100%;
     width: 90%;
@@ -96,7 +55,7 @@ export const List__content = styled.span`
 
 export const LinkStyle = styled(Link)`
     text-decoration: none;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
 `
 
 export const btnLargePrimary = styled.button`
@@ -138,12 +97,13 @@ export const profile__content = styled.div`
 export const content__name = styled.h3`
     font-size: 1rem;
     font-weight: 700;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
+    
 `
 export const content__nick = styled.h4`
     font-weight: 500;
     font-size: 1rem;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};
 `
 
 export const profile__options = styled.figure`

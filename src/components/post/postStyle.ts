@@ -6,7 +6,7 @@ export const post__tweet = styled.div`
     justify-content: center;
     align-items: start;
     min-height: 125px;
-    border: solid 1px var(--Dark7);
+    border:  solid 1px ${props => props.theme.colors.border};
     width: 615px;
 `
 export const tweet__figure__img = styled.img`
@@ -35,33 +35,33 @@ export const tweet__main__user = styled.div`
 `
 export const name__text = styled.h3`
     font-weight: 700;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
     font-size: 0.938rem;  
     margin-right: 4px;
     
 `
 export const name__nick = styled.h4`
     font-weight: 500;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};
     font-size: 0.938rem;  
     margin-right: 4px;
 `
 export const name__dot = styled.h5`
     font-weight: 400;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};
     font-size: 0.938rem;  
     margin-right: 4px;
 `
 export const name__time = styled.h5`
     font-weight: 500;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};
     font-size: 0.938rem;  
     margin-right: 4px;
 `
 export const tweet__main__content = styled.p`
     font-weight: 500;
     font-size: 0.938rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
     word-break: break-word;
     max-width: 80%;
 `
@@ -105,6 +105,9 @@ export const show__paragraph = styled.p`
 export const main__borderScrolll = styled.div`
     width: 100%;
     height: 1px;
-    background-color: var(--Dark7);
+    background-color: ${props => props.theme.colors.border};
+`
 
+export const SpanNumber = styled.span`
+    color: ${props => props.theme.colors.paragraph};
 `

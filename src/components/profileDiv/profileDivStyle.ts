@@ -5,4 +5,5 @@ export const Div = styled.div`
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: ${props => props.theme.colors.background};
 `

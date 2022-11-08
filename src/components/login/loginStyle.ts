@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const SectionLogin = styled.section`
     height: 100vh;
     width: 100vw;
-    background-color: var(--White);
+    background-color: ${props => props.theme.colors.background};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ export const Icon = styled.img`
 export const Title = styled.h1`
     font-weight: 900;
     font-size: 2.625rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
     font-family: 'Roboto', sans-serif;
 `
 export const InputLogin = styled.input`

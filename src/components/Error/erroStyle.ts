@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ErrorDiv = styled.div`
     height: 100vh;
     width: 100vw;
-    background-color: var(--White);
+    background-color: ${props => props.theme.colors.background};
     position: absolute;
     z-index: 3px;
     display: flex;

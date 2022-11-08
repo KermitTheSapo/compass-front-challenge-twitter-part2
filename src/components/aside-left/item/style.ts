@@ -10,10 +10,10 @@ export const asideLeft__List = styled.div.attrs((/* props */) => ({ tabIndex: 0 
     height: 30px;
     gap: 10px;
     cursor: pointer;
-    color: var(--Black);
-
+    /* color: var(--Black); */
+    color: ${props => props.theme.colors.text};
     &:hover {
-    color: var(--PrimaryBlue);
+        color: ${props => props.theme.colors.primary};
     }
 `
 
@@ -46,5 +46,6 @@ export const asideLeft__link = styled.a`
 
 export const LinkStyle = styled(Link)`
     text-decoration: none;
-    color: var(--Black);
+    /* color: var(--Black); */
+    color: ${props => props.theme.colors.text};
 `

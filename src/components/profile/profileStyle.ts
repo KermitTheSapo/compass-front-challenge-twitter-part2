@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Profile = styled.main`
     min-height: 80vh;
-    background-color: var(--White);
+    background-color: ${props => props.theme.colors.background};
     width: 45vw;
     display: flex;
     align-items: center;
@@ -14,11 +14,11 @@ export const Header = styled.header`
     position: fixed;
     top: 0px;
     width: 45vw;
-    border: 1px solid var(--Dark7);
+    border: 1px solid  ${props => props.theme.colors.border};
     display: flex;
     align-items: center;
     height: 53px;
-    background-color: white;
+    background-color: ${props => props.theme.colors.background};
 `
 
 
@@ -40,12 +40,12 @@ export const Header__content = styled.div`
 export const Content__name = styled.h2`
     font-weight: 700;
     font-size: 1.188rem;
-    color: var(--Black);
+    color:  ${props => props.theme.colors.text};    
 `
 export const Content__tweet = styled.p`
     font-weight: 500;
     font-size: 0.813rem;
-    color: var(--Dark5);
+    color:  ${props => props.theme.colors.paragraph};
 `
 
 export const MainProfile = styled.main`
@@ -95,18 +95,18 @@ export const DivContent = styled.div`
 export const ContentName = styled.h1`
     font-weight: 700;
     font-size: 1.313rem;
-    color: var(--Black);
+    color:  ${props => props.theme.colors.text};
 `
 export const ContentNick = styled.h3`
     font-weight: 500;
     font-size: 1rem;
-    color: var(--Dark5);
+    color:  ${props => props.theme.colors.paragraph};
 
 `
 export const ContentParagraph = styled.h2`
     font-weight: 500;
     font-size: 1rem;
-    color: var(--Black);
+    color:  ${props => props.theme.colors.text};
 `
 export const Information = styled.div`
     display: flex;
@@ -122,7 +122,7 @@ export const Icon = styled.img`
 export const ContentText = styled.h3`
     font-weight: 500;
     font-size: 1rem;
-    color: var(--Dark5);
+    color: ${props => props.theme.colors.paragraph};    
 `
 export const Follow = styled.div`
     display: flex;
@@ -134,7 +134,7 @@ export const Follow = styled.div`
 export const Number = styled.h4`
     font-weight: 700;
     font-size: 1rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.text};
 `
 export const Tabbar = styled.div`
     display: flex;
@@ -160,7 +160,7 @@ export const TabbarDiv = styled.div`
 export const TabbarName = styled.h3`
     font-weight: 700;
     font-size: 1rem;
-    color: var(--Black);
+    color: ${props => props.theme.colors.paragraph};
 `
 
 export const ProfileImg = styled.img`
