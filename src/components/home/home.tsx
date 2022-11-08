@@ -8,27 +8,26 @@ import * as S from "./homeStyle"
 let loginData = localStorage.getItem("name")
 let passwordData = localStorage.getItem("password")
 var loginObj = JSON.parse(loginData)
-var passwordObj = JSON.parse(passwordData)  
-console.log(loginObj)
-console.log(passwordObj)
-
+var passwordObj = JSON.parse(passwordData)
 let footerTrue = true
-
-if (loginObj === "admin" && passwordObj === "senha"){
+if (loginObj === "admin" && passwordObj === "admin"){
     footerTrue = false
 }
 
-export default function Home() {    
+interface Props {
+    toggleTheme(): void;
+}
+export default function Home({ toggleTheme }: Props) {    
     return(
         <S.Div>
             <Helmet>
                 <title>Home / Twitter</title>
             </Helmet>
             <Left/>
-            <Main/>
+            <Main toggleTheme={toggleTheme} />
             <Right/>
             {!footerTrue ? null : <Footer/> }
             {/* <Footer/> */}
         </S.Div>
-    )
+    ) 
 }
