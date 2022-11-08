@@ -8,10 +8,10 @@ export default function Footer(){
                 <S.footer__paragraph>People on Twitter are the first to know.</S.footer__paragraph>
             </S.footer__content>
             <S.footer__btn>
-                <S.footer__link href="error_404" >
+                <S.footer__link href="/" >
                     <S.btn__login type="button" >Log in</S.btn__login>
                 </S.footer__link>
-                <S.footer__link href="error_404">
+                <S.footer__link href="/">
                     <S.btn__sign type="button" >Sign up</S.btn__sign>
                 </S.footer__link>
             </S.footer__btn>
