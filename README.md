@@ -39,7 +39,9 @@
 
 ## About
 
-Recreating the twitter page, using Typescript and storybook
+Recreating the twitter page, using Typescript, React and storybook
+
+Design made for 1440px screens
 
 "npm install" for install the dependence 
 "Npm run dev" for localhost
