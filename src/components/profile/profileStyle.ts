@@ -167,7 +167,12 @@ export const ProfileImg = styled.img`
     border-radius: 100%;
     border: 5px solid var(--Black);
     position: absolute;
-    z-index: 2px;
     top: 150px;
     left: 400px;
+`
+export const DivPost = styled.div`
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
 `
