@@ -27,6 +27,7 @@ export const asideRight__input = styled.input`
     align-items: center;
     font-size: 1rem;
     background-color: ${props => props.theme.colors.input};
+    color: ${props => props.theme.colors.text};
     margin-top: 10px;
     margin-bottom: 15px;
     border: none;
