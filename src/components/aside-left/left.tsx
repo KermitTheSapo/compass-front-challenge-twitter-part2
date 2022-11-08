@@ -3,18 +3,33 @@ import * as S from "./leftStyle";
 import TwitterImg from "../../assets/imgs/asideLeft/white/twitter.svg";
 import House from "../../assets/imgs/asideLeft/white/house.svg";
 import hashtag from "../../assets/imgs/asideLeft/white/hashtag.svg";
+import hashtagDark from "../../assets/imgs/asideLeft/dark/hashtag.svg";
 import notification from "../../assets/imgs/asideLeft/white/notification.svg";
+import notificationDark from "../../assets/imgs/asideLeft/dark/notifications.svg";
 import message from "../../assets/imgs/asideLeft/white/message.svg";
+import messageDark from "../../assets/imgs/asideLeft/dark/message.svg";
 import bookmark from "../../assets/imgs/asideLeft/white/bookmark.svg";
+import bookmarkDark from "../../assets/imgs/asideLeft/dark/bookmark.svg";
 import list from "../../assets/imgs/asideLeft/white/list.svg";
+import listDark from "../../assets/imgs/asideLeft/dark/list.svg";
 import profile from "../../assets/imgs/asideLeft/white/profile.svg";
+import profileDark from "../../assets/imgs/asideLeft/dark/profile.svg";
 import more from "../../assets/imgs/asideLeft/white/more.svg";
+import moreDark from "../../assets/imgs/asideLeft/dark/more.svg";
 import profilePicture from "../../assets/imgs/asideLeft/profile/profilePicture.png";
 import options from "../../assets/imgs/asideLeft/profile/options.svg"
 
 import { Item } from "./item";
 import { focusInput } from "../../utils/Html";
+import { useState } from "react";
 export default function Left() {
+  
+  const [isDark, setIsDark] = useState();
+  setInterval(() => {
+    let theme = localStorage.getItem("theme")
+    setIsDark(theme.includes("dark"))
+  },1000)
+
   return (
     <S.AsideLeft>
       <S.asideLeft__itemList>
@@ -25,14 +40,14 @@ export default function Left() {
           />
         </S.itemList__figure>
         <S.asideLeft__ul>
-          <Item label={"Home"} icon={House} alt="" route="/home" />
-          <Item label={"Explore"} icon={hashtag} alt="" route="/erro" />
-          <Item label={"Notification"} icon={notification} alt="" route="/erro" />
-          <Item label={"Messages"} icon={message} alt="" route="/erro" />
-          <Item label={"Bookmarks"} icon={bookmark} alt="" route="/erro" />
-          <Item label={"List"} icon={list} alt="" route="/erro" />
-          <Item label={"Profile"} icon={profile} alt="" route="/profile" />
-          <Item label={"More"} icon={more} alt="The symbol of a blue house" route="/error" />
+          <Item label={"Home"} icon={House} alt="The house icon" route="/home" />
+          <Item label={"Explore"} icon={isDark ? hashtagDark :hashtag} alt="Gashtag icon" route="/erro" />
+          <Item label={"Notification"} icon={isDark ? notificationDark : notification} alt="A bell icon, related to notification" route="/erro" />
+          <Item label={"Messages"} icon={isDark ? messageDark : message} alt="An icon of a letter, related to messages" route="/erro" />
+          <Item label={"Bookmarks"} icon={isDark ? bookmarkDark : bookmark} alt="A bookmark icon" route="/erro" />
+          <Item label={"List"} icon={isDark ? listDark : list} alt="An icon of a sheet with things written on it" route="/erro" />
+          <Item label={"Profile"} icon={isDark ? profileDark : profile} alt="A person icon" route="/profile" />
+          <Item label={"More"} icon={isDark ? moreDark : more} alt="A circle with 3 dots inside" route="/error" />
         </S.asideLeft__ul>
         <S.btnLargePrimary onClick={() => {
               focusInput("input")
