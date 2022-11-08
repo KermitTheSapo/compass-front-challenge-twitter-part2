@@ -5,9 +5,12 @@ declare module "styled-components" {
     title: string;
 
     colors: {
+      paragraph: string;
       primary: string;
       secondary: string;
-
+      input: string;
+      happeningDiv: string;
+      border: string;
       background: string;
       text: string;
     };
