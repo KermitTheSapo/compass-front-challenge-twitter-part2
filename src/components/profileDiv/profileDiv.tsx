@@ -5,19 +5,14 @@ import Footer from "../footer/footer";
 import Profile from "../profile/profile";
 import * as S from "./profileDivStyle"
 
-let loginData = localStorage.getItem("name")
-let passwordData = localStorage.getItem("password")
+let loginData = localStorage.getItem("name") as string
+let passwordData = localStorage.getItem("password") as string
 var loginObj = JSON.parse(loginData)
 var passwordObj = JSON.parse(passwordData)  
-console.log(loginObj)
-console.log(passwordObj)
-
 let footerTrue = true
-
 if (loginObj === "admin" && passwordObj === "admin"){
     footerTrue = false
 }
-
 export default function ProfileDiv(){
     return(
         <S.Div>
