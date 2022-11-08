@@ -6,7 +6,7 @@ import twitter from "/src/assets/imgs/asideLeft/white/twitter.svg"
 export default function Login(){
     const registeredLogin = {
         name: "admin",
-        password: "senha"
+        password: "admin"
     }
     const loginInput = document.querySelector("#login")
     const passwordInput = document.querySelector("#password")
@@ -14,10 +14,6 @@ export default function Login(){
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
     const [errorLogin, setErrorLogin] = useState(false)
-    // console.log(loginData)
-    // console.log(passwordData)
-    // console.log(loginObj)
-    // console.log(passwordObj)
     const keepCredentials = () =>{
         if (login.length > 0 && password.length > 0){
             if(login === registeredLogin.name && password === registeredLogin.password){
