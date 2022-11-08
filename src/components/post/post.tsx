@@ -49,25 +49,25 @@ export default function Post(props: PostProps) {
         <S.tweet__main__actions>
           <S.actions__div>
             <S.actionsImg src={comment} alt="Bubble chat icon" />
-            <span>{props.data.commentValue}</span>
+            <S.SpanNumber>{props.data.commentValue}</S.SpanNumber>
           </S.actions__div>
           <S.actions__div>
             <S.actionsImg
               src={retweet}
               alt="Retweet related two arrow symbol"
             />
-            <span>{props.data.retweetValue}</span>
+            <S.SpanNumber>{props.data.retweetValue}</S.SpanNumber>
           </S.actions__div>
           <S.actions__div>
             <S.actionsImg src={likeDisabled} alt="Red heart symbol" />
-            <span>{props.data.likeValue}</span>
+            <S.SpanNumber>{props.data.likeValue}</S.SpanNumber>
           </S.actions__div>
           <S.actions__div>
             <S.actionsImg
               src={share}
               alt="An arrow symbol with a dash below, related to sharing the post"
             />
-            <span>{props.data.shareValue}</span>
+            <S.SpanNumber>{props.data.shareValue}</S.SpanNumber>
           </S.actions__div>
         </S.tweet__main__actions>
         <S.tweet__main__show>
