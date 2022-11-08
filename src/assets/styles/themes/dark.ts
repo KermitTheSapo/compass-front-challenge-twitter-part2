@@ -2,11 +2,14 @@ export default {
     title: "dark",
   
     colors: {
-      primary: "#0F1419",
+      primary: "#17202A",
       secondary: "#D63AF9",
-  
-      background: "#f5f5f5",
-      text: "#333",
+      background: "#17202A",
+      text: "#FFFFFF",
+      paragraph: "#8899A6",
+      input: "#283340",
+      happeningDiv: "#1C2733",
+      border: "#3A444C"
     },
   };
   // --Black: #0F1419;
