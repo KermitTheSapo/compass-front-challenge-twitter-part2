@@ -7,6 +7,7 @@ export const post__tweet = styled.div`
     align-items: start;
     min-height: 125px;
     border: solid 1px var(--Dark7);
+    width: 615px;
 `
 export const tweet__figure__img = styled.img`
     border-radius: 50%;
