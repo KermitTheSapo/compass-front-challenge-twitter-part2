@@ -30,6 +30,7 @@ export const Reset = createGlobalStyle`
     }
     body {
         line-height: 1;
+        background-color: ${props => props.theme.colors.background};
     }
     ol, ul {
         list-style: none;
