@@ -8,10 +8,10 @@ import Post from "../post/post"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 export default function Profile(){
-    let postData = localStorage.getItem("post")
+    let postData = localStorage.getItem("post") as string
     var postObj = JSON.parse(postData)
-    let loginData = localStorage.getItem("name")
-    let passwordData = localStorage.getItem("password")
+    let loginData = localStorage.getItem("name") as string
+    let passwordData = localStorage.getItem("password") as string
     var loginObj = JSON.parse(loginData)
     var passwordObj = JSON.parse(passwordData)
     const navigate = useNavigate()
@@ -27,8 +27,8 @@ export default function Profile(){
     return(
         <S.Profile>
             <S.Header>
-                <S.Header__figure>
-                    <S.Figure__img src={Arrow} alt="" />
+                <S.Header__figure onClick={() => navigate("/home")}>
+                    <S.Figure__img src={Arrow} alt="a blue arrow pointing to the left" />
                 </S.Header__figure>
                 <S.Header__content>
                     <S.Content__name>Name</S.Content__name>
@@ -37,21 +37,21 @@ export default function Profile(){
             </S.Header>
             <S.MainProfile>
                 <S.MainProfile__background>
-                    <S.BackgroundImg src={Background} alt="" />
+                    <S.BackgroundImg src={Background} alt="a mountain with purple colors in the environment" />
                 </S.MainProfile__background>
                 <S.MainProfile__content>
                     <S.DivBtn>
                         <S.Btn>Edit profile</S.Btn>                        
                     </S.DivBtn>
                     <S.DivContent>
-                        <S.ProfileImg src={profile} alt="" />
-                        <S.ContentName>Davide Biscuso</S.ContentName>
-                        <S.ContentNick>@biscuttu</S.ContentNick>
+                        <S.ProfileImg src={profile} alt="a person with a black shirt and a cookie head" />
+                        <S.ContentName>Jerome Bell</S.ContentName>
+                        <S.ContentNick>@afonsoinocente</S.ContentNick>
                         <S.ContentParagraph>Product Desing</S.ContentParagraph>
                         <S.Information>
-                            <S.Icon src={Localization} alt="" />
+                            <S.Icon src={Localization} alt="a dot icon relative to location" />
                             <S.ContentText>London</S.ContentText>
-                            <S.Icon src={calendar} alt="" />
+                            <S.Icon src={calendar} alt="a calendar icon" />
                             <S.ContentText>Joined September 2011</S.ContentText>
                         </S.Information>
                         <S.Follow>
@@ -78,51 +78,8 @@ export default function Profile(){
                 </S.MainProfile__content>
             </S.MainProfile>
             <S.DivPost>
-                
                 {postObj && postObj.map((data) => <Post data={data}/>)}  
-            </S.DivPost>    
-            {/* {postObj.map((item) =>(
-                    <P.post__tweet>
-                        <P.tweet__figure>
-                            <P.tweet__figure__img src="./src/assets/imgs/main/profileDevon.svg" alt="Image of a woman with blonde hair, brown coat and white blouse"/>
-                        </P.tweet__figure>
-                        <P.tweet__main >
-                            <P.tweet__main__user >
-                                <P.name__text>Devon Lane</P.name__text>
-                                <P.name__nick>@johndue</P.name__nick>
-                                <P.name__dot >·</P.name__dot>
-                                <P.name__time >{item.name}s</P.name__time>
-                            </P.tweet__main__user>
-                            <P.tweet__main__content >{item.content}</P.tweet__main__content>
-                            <P.tweet__main__media >
-                                <P.main__media__img src="./src/assets/imgs/main/astronaut.png" alt="Image of an astronaut in a blue suit in a purple space"/>
-                            </P.tweet__main__media>
-                            <P.tweet__main__actions >
-                                <P.actions__div >
-                                    <P.actionsImg src={comment} alt="Bubble chat icon"/>
-                                    <span>0</span>
-                                </P.actions__div>
-                                <P.actions__div >
-                                    <P.actionsImg src={retweet} alt="Retweet related two arrow symbol"/>
-                                    <span>0</span>
-                                </P.actions__div>
-                                <P.actions__div>
-                                    <P.actionsImg src={likeDisabled} alt="Red heart symbol"/>
-                                    <span>0</span>
-                                </P.actions__div>
-                                <P.actions__div >
-                                    <P.actionsImg src={share} alt="An arrow symbol with a dash below, related to sharing the post"/>
-                                    <span>0</span>
-                                </P.actions__div>
-                            </P.tweet__main__actions>
-                            <P.tweet__main__show>
-                                <P.show__link href="" >
-                                    <P.show__paragraph >Show this thread</P.show__paragraph>
-                                </P.show__link>
-                            </P.tweet__main__show>
-                        </P.tweet__main>
-                    </P.post__tweet>
-                    ))} */}
+            </S.DivPost>
         </S.Profile>
     )
 }
