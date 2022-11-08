@@ -21,13 +21,17 @@ import comment from "../../assets/imgs/main/comment.svg"
 import retweet from "../../assets/imgs/main/retweet.svg"
 import likeDisabled from "../../assets/imgs/main/like-disabled.svg"
 import share from "../../assets/imgs/main/share.svg"
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Post(props: PostProps) {
+  const navigate = useNavigate()
   return (
     <S.post__tweet>
       <S.tweet__figure>
         <S.tweet__figure__img
-          src="./src/assets/imgs/main/profileDevon.svg"
+          src="./src/assets/imgs/main/profile.png"
           alt="Image of a woman with blonde hair, brown coat and white blouse"
         />
       </S.tweet__figure>
@@ -71,7 +75,7 @@ export default function Post(props: PostProps) {
           </S.actions__div>
         </S.tweet__main__actions>
         <S.tweet__main__show>
-          <S.show__link href="">
+          <S.show__link onClick={() => navigate("/error")}>
             <S.show__paragraph>Show this thread</S.show__paragraph>
           </S.show__link>
         </S.tweet__main__show>
