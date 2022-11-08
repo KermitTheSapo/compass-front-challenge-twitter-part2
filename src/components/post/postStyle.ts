@@ -64,6 +64,7 @@ export const tweet__main__content = styled.p`
     color: ${props => props.theme.colors.text};
     word-break: break-word;
     max-width: 80%;
+    margin-bottom: 10px;
 `
 export const tweet__main__media = styled.div`
     margin-bottom: 16px;
