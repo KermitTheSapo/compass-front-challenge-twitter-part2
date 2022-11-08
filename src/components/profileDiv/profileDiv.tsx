@@ -14,7 +14,7 @@ console.log(passwordObj)
 
 let footerTrue = true
 
-if (loginObj === "admin" && passwordObj === "senha"){
+if (loginObj === "admin" && passwordObj === "admin"){
     footerTrue = false
 }
 
