@@ -15,8 +15,8 @@ interface Props {
 }
 
 export default function Main({ toggleTheme }: Props){
-  let loginData = localStorage.getItem("name")
-  let passwordData = localStorage.getItem("password")
+  let loginData = localStorage.getItem("name") as string
+  let passwordData = localStorage.getItem("password") as string
   var loginObj = JSON.parse(loginData)
   var passwordObj = JSON.parse(passwordData)  
   const navigate = useNavigate()
