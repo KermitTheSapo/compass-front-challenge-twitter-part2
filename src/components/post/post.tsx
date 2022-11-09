@@ -22,9 +22,6 @@ import retweet from "../../assets/imgs/main/retweet.svg"
 import likeDisabled from "../../assets/imgs/main/like-disabled.svg"
 import share from "../../assets/imgs/main/share.svg"
 import { useNavigate } from "react-router-dom";
-
-
-
 export default function Post(props: PostProps) {
   const navigate = useNavigate()
   return (
