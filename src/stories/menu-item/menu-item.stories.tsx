@@ -6,7 +6,6 @@ export default {
   component: MenuItem,
   argTypes: {
     name: {control: {type: 'select', options: ["house-inverted", "house-default", "house-selected"]}},
-    size: {control: {type: 'select', options: ["small", "medium", "large"]}},
   },
   color: {
     control: {control: {type: 'select', options: ["blue", "dark", "light"]}}
@@ -19,5 +18,4 @@ export const base = Template.bind({});
 base.args = {
     name: 'house-inverted',
     color: "light",
-    size: "small"
 };

@@ -1,42 +1,43 @@
 @import url("../../root.css");
 
-.imgIcon{
-    margin-right: 21px;
-}
-.h1-blue{
-    color: var(--PrimaryBlue);
-}
-.h1-dark{
-    color: var(--Black);
-}
-.h1-light{
-    color: var(--White);
+.imgIcon {
+  margin-right: 21px;
 }
 
-.div-menu-item{
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.h1-blue {
+  color: var(--PrimaryBlue);
 }
-.h1-small{
-    font-size: 1rem;
+.h1-dark {
+  color: var(--Black);
 }
-
-.h1-medium{
-    font-size: 2rem;
+.h1-light {
+  color: var(--White);
 }
 
-.h1-large{
-    font-size: 3rem;
+.div-menu-item {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h1-small {
+  font-size: 1rem;
 }
 
-.house-inverted{
-    color: var(--White);
+.h1-medium {
+  font-size: 2rem;
 }
-.house-default{
-    color: var(--Black);    
+
+.h1-large {
+  font-size: 3rem;
 }
-.house-selected{
-    color: var(--PrimaryBlue);
+
+.house-inverted {
+  color: var(--White);
+}
+.house-default {
+  color: var(--Black);
+}
+.house-selected {
+  color: var(--PrimaryBlue);
 }
