@@ -43,7 +43,7 @@ Recreating the twitter page, using Typescript, React and storybook
 
 Design made for 1440px screens
 
-"npm install" for install the dependence 
+"npm install" for install the dependences
 "Npm run dev" for localhost
 "npm run storybook" for storybook
 
@@ -58,12 +58,12 @@ Design made for 1440px screens
 - [X] aside right
     - [X] structure
     - [X] stylization
-- [ ] main
-    - [ ] You should be able to insert comments
+- [X] main
+    - [X] You should be able to insert comments
     - [X] Add Publication
     - [X] add img
     - [X] The page must have scroll in the middle column (2 or 3 more posts appear)
-    - [ ] time
+    - [X] time
     - [X] btn with focus
 - [X] footer
     - [X] stylization
