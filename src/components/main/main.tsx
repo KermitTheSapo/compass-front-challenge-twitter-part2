@@ -55,7 +55,6 @@ export default function Main({ toggleTheme }: Props){
   const [imgValue, setImgValue] = useState("")  
   const inputElement = useRef();
 
-
   const createPost = () =>{    
     const post: PostInterface = {
       time: `${now.getHours()}h${now.getMinutes()}m`,
