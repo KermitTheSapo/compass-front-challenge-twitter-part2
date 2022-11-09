@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import styled from "styled-components";
 
 
@@ -111,4 +112,61 @@ export const main__borderScrolll = styled.div`
 
 export const SpanNumber = styled.span`
     color: ${props => props.theme.colors.paragraph};
+`
+
+export const CommentBlock = styled.form`
+    margin-bottom: 10px;
+    gap: 10px;
+`
+
+export const InputComment = styled.input`
+    width: 75%;
+    height: 30px;
+    border: solid 1px ${props => props.theme.colors.border};
+    border-radius: 15px;
+    padding: 5px 0px 5px 10px;
+    outline: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-right: 10px;
+    color: ${props => props.theme.colors.text};
+    background-color: ${props => props.theme.colors.background};
+    &::placeholder{
+        color: ${props => props.theme.colors.paragraph}; 
+    }
+`
+
+export const CommentPost = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+`
+
+export const ButtonReply = styled.button`
+    height: 35px;
+    width: 77px;
+    border-radius: 9999px;
+    background-color: var(--PrimaryBlue);
+    opacity: 0.5;
+    border: none;
+    outline: none;
+    font-size: 0.938rem;
+    color: var(--White);
+    font-weight: 700;
+    margin-right: 10px;
+`
+
+export const ParagraphComment = styled.p`
+    color: ${props => props.theme.colors.text};
+    max-width: 90%;
+`
+
+export const ContentDiv = styled.div`
+    display: flex;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 15px;
 `
