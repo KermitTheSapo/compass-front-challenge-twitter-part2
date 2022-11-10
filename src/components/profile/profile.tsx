@@ -7,7 +7,7 @@ import profile from "../../assets/imgs/profileComponent/ProfilePicture.png"
 import Post from "../post/post"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-export default function Profile(){
+export default function Profile() {
     let postData = localStorage.getItem("post") as string
     var postObj = JSON.parse(postData)
     let loginData = localStorage.getItem("name") as string
@@ -16,15 +16,15 @@ export default function Profile(){
     var passwordObj = JSON.parse(passwordData)
     const navigate = useNavigate()
     useEffect(() => {
-        if(loginObj === "admin" && passwordObj === "admin") {
-        } else{
-        let userAnswer = confirm("The user is not connected to an account, please go back to the login page to login or enjoy the guest version")
-        if (userAnswer === true){
-            navigate("/")
+        if (loginObj === "admin" && passwordObj === "admin") {
+        } else {
+            let userAnswer = confirm("The user is not connected to an account, please go back to the login page to login or enjoy the guest version")
+            if (userAnswer === true) {
+                navigate("/")
+            }
         }
-    }
-  }, [navigate])
-    return(
+    }, [navigate])
+    return (
         <S.Profile>
             <S.Header>
                 <S.Header__figure onClick={() => navigate("/home")}>
@@ -41,7 +41,13 @@ export default function Profile(){
                 </S.MainProfile__background>
                 <S.MainProfile__content>
                     <S.DivBtn>
-                        <S.Btn>Edit profile</S.Btn>                        
+                        <S.Btn onClick={() => {
+                            if (loginObj === "admin" && passwordObj === "admin") {
+                                navigate("/error")
+                            } else {
+                                alert("You are in guest mode, you can't post")
+                            }
+                        }}>Edit profile</S.Btn>
                     </S.DivBtn>
                     <S.DivContent>
                         <S.ProfileImg src={profile} alt="a person with a black shirt and a cookie head" />
@@ -78,7 +84,7 @@ export default function Profile(){
                 </S.MainProfile__content>
             </S.MainProfile>
             <S.DivPost>
-                {postObj && postObj.map((data) => <Post data={data}/>)}  
+                {postObj && postObj.map((data) => <Post data={data} />)}
             </S.DivPost>
         </S.Profile>
     )
