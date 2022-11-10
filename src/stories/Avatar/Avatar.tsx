@@ -8,5 +8,5 @@ interface HeaderProps {
 }
 
 export const Avatar = ({ size }: HeaderProps) => (
-    <img src={size === "small"? avatarSmall : avatarMedium} alt={size} className={`avatar-${size}`} />
+    <img src={size === "small" ? avatarSmall : avatarMedium} alt={size} className={`avatar-${size}`} />
 );

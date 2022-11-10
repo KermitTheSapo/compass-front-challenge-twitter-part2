@@ -1,7 +1,7 @@
 import * as S from "./footerStyle"
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <S.footer>
             <S.footer__content>
                 <S.footer__title >Don't miss what's happening</S.footer__title>

@@ -25,7 +25,7 @@
   </a>
 
 <h4 align="center"> 
-	 Status: Doing
+	 Status: Done
 </h4>
 
 <p align="center">

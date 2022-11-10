@@ -27,6 +27,7 @@ export default function Left() {
   const [isDark, setIsDark] = useState();
   setInterval(() => {
     let theme = localStorage.getItem("theme")
+    // @ts-ignore
     setIsDark(theme.includes("dark"))
   }, 1000)
   let loginData = localStorage.getItem("name") as string

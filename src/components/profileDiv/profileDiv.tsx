@@ -8,21 +8,21 @@ import * as S from "./profileDivStyle"
 let loginData = localStorage.getItem("name") as string
 let passwordData = localStorage.getItem("password") as string
 var loginObj = JSON.parse(loginData)
-var passwordObj = JSON.parse(passwordData)  
+var passwordObj = JSON.parse(passwordData)
 let footerTrue = true
-if (loginObj === "admin" && passwordObj === "admin"){
+if (loginObj === "admin" && passwordObj === "admin") {
     footerTrue = false
 }
-export default function ProfileDiv(){
-    return(
+export default function ProfileDiv() {
+    return (
         <S.Div>
             <Helmet>
                 <title>Profile / Twitter</title>
             </Helmet>
-            <Left/>
-            <Profile/>
-            <Right/>
-            {!footerTrue ? null : <Footer/> }
+            <Left />
+            <Profile />
+            <Right />
+            {!footerTrue ? null : <Footer />}
         </S.Div>
     )
 }

@@ -53,7 +53,7 @@ export default function Profile() {
                         <S.ProfileImg src={profile} alt="a person with a black shirt and a cookie head" />
                         <S.ContentName>Jerome Bell</S.ContentName>
                         <S.ContentNick>@afonsoinocente</S.ContentNick>
-                        <S.ContentParagraph>Product Desing</S.ContentParagraph>
+                        <S.ContentParagraph>Product Design</S.ContentParagraph>
                         <S.Information>
                             <S.Icon src={Localization} alt="a dot icon relative to location" />
                             <S.ContentText>London</S.ContentText>

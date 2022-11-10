@@ -1,7 +1,6 @@
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import light from "./assets/styles/themes/light";
 import dark from "./assets/styles/themes/dark";
-import { useState } from "react";
 import Login from "./components/login/login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Reset } from "./assets/styles/reset";
@@ -19,10 +18,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-      <Reset/>
+        <Reset />
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home toggleTheme={toggleTheme}  />} />
+          <Route path="/home" element={<Home toggleTheme={toggleTheme} />} />
           <Route path="/profile" element={<ProfileDiv />} />
           <Route path="/*" element={<Error />} />
         </Routes>

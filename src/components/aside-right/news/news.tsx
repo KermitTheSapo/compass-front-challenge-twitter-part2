@@ -1,14 +1,14 @@
 import * as S from "./newsStyle"
 type Props = {
-    theme: string,
-    title: string,
-    trending: string,
-    hashtag: string,
-    img: string,
-    alt: string,
+  theme: string,
+  title: string,
+  trending: string,
+  hashtag: string,
+  img: string,
+  alt: string,
 }
 
-export default function News({alt, hashtag, img, theme, title, trending}:Props) {
+export default function News({ alt, hashtag, img, theme, title, trending }: Props) {
   return (
     <S.happening__news>
       <S.news__div>

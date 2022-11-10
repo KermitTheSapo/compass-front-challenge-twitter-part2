@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom"
 interface Props {
   toggleTheme(): void;
 }
+//@ts-nocheck 
 
 export default function Main({ toggleTheme }: Props) {
   let loginData = localStorage.getItem("name") as string

@@ -22,7 +22,6 @@ import retweet from "../../assets/imgs/main/retweet.svg"
 import likeDisabled from "../../assets/imgs/main/like-disabled.svg"
 import likeActive from "../../assets/imgs/main/like-active.svg"
 import share from "../../assets/imgs/main/share.svg"
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 export default function Post(props: PostProps) {
   let loginData = localStorage.getItem("name") as string
@@ -30,7 +29,7 @@ export default function Post(props: PostProps) {
   var loginObj = JSON.parse(loginData)
   var passwordObj = JSON.parse(passwordData)
   const [showThisThread, setShowThisThread] = useState(true)
-  
+
   let now = new Date();
   const [countLike, setCountLike] = useState(0)
   const [commentDiv, setCommentDiv] = useState(false)
@@ -54,7 +53,7 @@ export default function Post(props: PostProps) {
   }
   const canReplay = () => {
     if (loginObj === "admin" && passwordObj === "admin") {
-      commentDiv ? setCommentDiv(false) : setCommentDiv(true); 
+      commentDiv ? setCommentDiv(false) : setCommentDiv(true);
     } else {
       alert("You are in guest mode, you can't post")
     }
