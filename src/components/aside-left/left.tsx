@@ -23,12 +23,16 @@ import { Item } from "./item";
 import { focusInput } from "../../utils/Html";
 import { useState } from "react";
 export default function Left() {
-  
+
   const [isDark, setIsDark] = useState();
   setInterval(() => {
     let theme = localStorage.getItem("theme")
     setIsDark(theme.includes("dark"))
-  },1000)
+  }, 1000)
+  let loginData = localStorage.getItem("name") as string
+  let passwordData = localStorage.getItem("password") as string
+  var loginObj = JSON.parse(loginData)
+  var passwordObj = JSON.parse(passwordData)
 
   return (
     <S.AsideLeft>
@@ -41,7 +45,7 @@ export default function Left() {
         </S.itemList__figure>
         <S.asideLeft__ul>
           <Item label={"Home"} icon={House} alt="The house icon" route="/home" />
-          <Item label={"Explore"} icon={isDark ? hashtagDark :hashtag} alt="Gashtag icon" route="/erro" />
+          <Item label={"Explore"} icon={isDark ? hashtagDark : hashtag} alt="Gashtag icon" route="/erro" />
           <Item label={"Notification"} icon={isDark ? notificationDark : notification} alt="A bell icon, related to notification" route="/erro" />
           <Item label={"Messages"} icon={isDark ? messageDark : message} alt="An icon of a letter, related to messages" route="/erro" />
           <Item label={"Bookmarks"} icon={isDark ? bookmarkDark : bookmark} alt="A bookmark icon" route="/erro" />
@@ -50,8 +54,12 @@ export default function Left() {
           <Item label={"More"} icon={isDark ? moreDark : more} alt="A circle with 3 dots inside" route="/error" />
         </S.asideLeft__ul>
         <S.btnLargePrimary onClick={() => {
-              focusInput("input")
-          }} type="button">
+          if (loginObj === "admin" && passwordObj === "admin") {
+            focusInput("input")
+          } else {
+            alert("You are in guest mode, you can't post")
+          }
+        }} type="button">
           Tweet
         </S.btnLargePrimary>
       </S.asideLeft__itemList>
