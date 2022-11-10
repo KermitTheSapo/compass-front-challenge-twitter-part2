@@ -55,8 +55,9 @@ export const post__input = styled.div`
     position: fixed;
     top: 53px;
     background-color: ${props => props.theme.colors.background};
-    width: 42.6%;
+    width: 42.5%;
     margin-bottom: 5px;
+    margin-left: 2px;
     border-left: solid 1px ${props => props.theme.colors.border};
     border-right: solid 1px ${props => props.theme.colors.border};
 `
@@ -85,7 +86,8 @@ export const post__emoji = styled.div`
     justify-content: space-between;
     position: fixed;
     top: 101px;
-    width: 42.6%;
+    width: 42.5%;
+    margin-left: 2px;
     background-color: ${props => props.theme.colors.background};
     margin-bottom: 20px;
     border-left: solid 1px ${props => props.theme.colors.border};
@@ -130,7 +132,8 @@ export const post__submit = styled.button`
 `
 
 export const main__borderScroll = styled.div`
-    width: 40%;
+    width: 42.5%;
+    margin-left: 2px;
     height: 1px;
     background-color: ${props => props.theme.colors.border};
     position: fixed;
