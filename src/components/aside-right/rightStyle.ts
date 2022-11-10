@@ -86,6 +86,7 @@ export const follow = styled.section`
     flex-direction: column;
     height: 300px;
     border-radius: 16px;
+    margin-bottom: 15px;
 `
 
 export const follow__title = styled.h3`
@@ -182,7 +183,5 @@ export const follow__terms = styled.p`
     margin-top: 15px;
     color: ${props => props.theme.colors.paragraph};
 `
-
-
 
 
