@@ -30,8 +30,7 @@ export default function Post(props: PostProps) {
   var loginObj = JSON.parse(loginData)
   var passwordObj = JSON.parse(passwordData)
   const [showThisThread, setShowThisThread] = useState(true)
-
-  const navigate = useNavigate()
+  
   let now = new Date();
   const [countLike, setCountLike] = useState(0)
   const [commentDiv, setCommentDiv] = useState(false)
